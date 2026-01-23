@@ -189,10 +189,31 @@ The party supports a comprehensive climate and industrial policy that includes:
 
 ---
 
+## Expanded documentation
+
+Detailed implementation drafts for each major section are available in the `docs/` folder. These files expand on the high-level proposals in this README with policy items, implementation notes, and suggested metrics.
+
+- [I. Fiscal Policy and Wealth Concentration](docs/01-fiscal-policy-and-wealth-concentration.md)
+- [II. Healthcare System Reform](docs/02-healthcare-system-reform.md)
+- [III. Democratic Reform and Electoral Integrity](docs/03-democratic-reform-and-electoral-integrity.md)
+- [IV. Structural Reform of Federal Government](docs/04-structural-reform-of-federal-government.md)
+- [V. Rule of Law and Institutional Accountability](docs/05-rule-of-law-and-institutional-accountability.md)
+- [VI. Competition, Labor Rights, and Market Regulation](docs/06-competition-labor-rights-and-market-regulation.md)
+- [VII. Climate and Energy Policy](docs/07-climate-and-energy-policy.md)
+- [VIII. Education Policy](docs/08-education-policy.md)
+- [IX. Transportation and Traffic Safety](docs/09-transportation-and-traffic-safety.md)
+- [X. Public Safety and Law Enforcement Oversight](docs/10-public-safety-and-law-enforcement-oversight.md)
+- [XI. Science, Technology, and Public Ownership](docs/11-science-technology-and-public-ownership.md)
+- [XII. Housing, Mental Health, and Social Services](docs/12-housing-mental-health-and-social-services.md)
+
+Contributing
+
+To propose edits or expand these drafts, edit the corresponding file in `docs/` and submit a pull request. For substantial changes, add short implementation notes and any source references.
+
+---
+
 ## Conclusion
 
 This platform is designed to restore institutional capacity, reduce inequality, and align public policy with democratic governance. Its proposals emphasize enforceability, administrative feasibility, and long-term sustainability.
 
 The objective is a government that functions predictably, governs competently, and serves the public interest.
-
-Just tell me how you want to proceed.

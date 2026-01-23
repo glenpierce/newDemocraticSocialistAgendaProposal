@@ -205,6 +205,12 @@ Detailed implementation drafts for each major section are available in the `docs
 - [X. Public Safety and Law Enforcement Oversight](docs/10-public-safety-and-law-enforcement-oversight.md)
 - [XI. Science, Technology, and Public Ownership](docs/11-science-technology-and-public-ownership.md)
 - [XII. Housing, Mental Health, and Social Services](docs/12-housing-mental-health-and-social-services.md)
+- [XIII. Economic analysis and 10-year projections](docs/13-economic-analysis-and-10-year-projections.md)
+
+Model assumptions & verification
+
+* The reproducible 10-year budget model in `tools/10yr_budget_model.py` uses a starting (Year 1) nominal U.S. GDP of $31.0 trillion by default and a Year‑1 baseline federal outlays assumption of $7.0 trillion. The model writes scenario CSVs to the `outputs/` folder.
+* To verify numeric tables in the docs, open the generated CSVs in `outputs/` (for example `outputs/10yr_projection_central_balanced.csv`) and compare values to the table in `docs/13-economic-analysis-and-10-year-projections.md`.
 
 Contributing
 

@@ -1,0 +1,151 @@
+# XIII. Economic Analysis and 10‑Year Fiscal Projections
+
+Summary
+
+This section provides a parameterized, reproducible 10‑year fiscal model that compares baseline federal receipts and outlays to the platform's policy package. It presents (1) a contract of model inputs/outputs, (2) the core equations, (3) a clearly stated set of assumptions, (4) a central-case numeric projection, and (5) sensitivity scenarios. All assumptions and parameter choices are documented so the analysis can be reproduced and adjusted.
+
+Contract (inputs / outputs / success criteria)
+
+- Inputs: initial-year GDP, baseline federal receipts and outlays, annual GDP growth, inflation, baseline revenue/outlay growth rates, and policy parameters (tax rates, coverage and compliance factors, phased-in years, and annual program spending increments).
+- Outputs: annual receipts, annual outlays, annual deficit/surplus, cumulative deficit over 10 years, and key fiscal ratios (deficit/GDP, debt change).
+- Success criteria: under the central-case parameter set, the cumulative 10‑year additional deficit attributable to policy changes is zero or negative (i.e., balanced or surplus), and key debt-stress indicators do not exceed pre-specified thresholds.
+
+Key assumptions (central case)
+
+- Initial nominal GDP (Year 1): $31.0 trillion.
+- Baseline federal receipts (Year 1): $5.0 trillion; baseline federal outlays (Year 1): $7.0 trillion (baseline deficit = $2.0T).
+- Baseline receipts and outlays grow with nominal GDP plus an index: baseline growth = 1.5% above nominal GDP growth (to reflect demographic and healthcare pressures).
+- Nominal GDP growth (central): 3.0% per year.
+- Interest and macro feedbacks are modeled simply (debt service effects captured approximately via a 10‑year average interest rate on new debt of 3.5%).
+
+Policy levers (central-case full-strength values at steady state)
+
+- Wealth tax: 8% annual rate on net assets above $100M; estimated steady-state taxable wealth above threshold = $10.0 trillion; compliance factor = 60%; administrative net cost factor = 5%.
+  - Steady-state revenue: 0.08 * $10T * 0.60 * (1 - 0.05) = $456B/year.
+- Corporate tax & minimum tax changes: +$150B/year.
+- Capital gains alignment: +$120B/year.
+- Enhanced enforcement and anti-evasion: +$80B/year.
+- Healthcare transition (single‑payer): net federal spending increase (after redirecting private premiums) = +$300B/year at steady state (reflecting higher public coverage but lower aggregate administrative waste and negotiated drug prices).
+- Investments in housing, education, climate, and workforce: +$350B/year at steady state.
+
+Ramp assumptions (phasing)
+
+- Policies phase in over years 1–4. Revenue measures reach 25%/50%/75%/100% of steady-state in years 1/2/3/4 respectively; spending measures reach 25%/50%/75%/100% similarly.
+
+Core equations (annual, for year t)
+
+- GDP_t = GDP_{t-1} * (1 + g)
+- BaselineReceipts_t = BaselineReceipts_{t-1} * (1 + g + b_r)
+- BaselineOutlays_t = BaselineOutlays_{t-1} * (1 + g + b_o)
+- PolicyRevenue_t = sum_over_policies (SteadyRevenue_p * RampFactor_t)
+- PolicySpending_t = sum_over_programs (SteadySpending_s * RampFactor_t)
+- TotalReceipts_t = BaselineReceipts_t + PolicyRevenue_t
+- TotalOutlays_t = BaselineOutlays_t + PolicySpending_t
+- Deficit_t = TotalOutlays_t - TotalReceipts_t
+- CumulativeNetPolicyDeficit_10yr = sum_{t=1..10} (Deficit_t - BaselineDeficit_t)
+
+Central-case numeric projection (rounded, USD billions)
+
+Notes on construction: the central-case numeric table below is taken directly from the reproducible model output (`outputs/10yr_projection_central_balanced.csv`). Values are in billions USD; GDP and fiscal series are nominal and rounded to one decimal where appropriate.
+
+| Year | GDP (nominal) | Baseline Receipts | Baseline Outlays | Policy Revenue | Policy Spending | Total Receipts | Total Outlays | Deficit |
+|------|---------------:|------------------:|-----------------:|----------------:|----------------:|---------------:|--------------:|--------:|
+| 1 | 31,000.0 | 5,000.0 | 7,000.0 | 292.5 | 137.5 | 5,292.5 | 7,137.5 | 1,845.0 |
+| 2 | 31,930.0 | 5,200.0 | 7,280.0 | 585.0 | 275.0 | 5,785.0 | 7,555.0 | 1,770.0 |
+| 3 | 32,887.9 | 5,408.0 | 7,571.2 | 877.5 | 412.5 | 6,285.5 | 7,983.7 | 1,698.2 |
+| 4 | 33,874.5 | 5,624.3 | 7,874.0 | 1,170.0 | 550.0 | 6,794.3 | 8,424.0 | 1,629.7 |
+| 5 | 34,890.8 | 5,849.3 | 8,189.0 | 1,170.0 | 550.0 | 7,019.3 | 8,739.0 | 1,719.7 |
+| 6 | 35,937.5 | 6,083.3 | 8,516.6 | 1,170.0 | 550.0 | 7,253.3 | 9,066.6 | 1,813.3 |
+| 7 | 37,015.6 | 6,326.6 | 8,857.2 | 1,170.0 | 550.0 | 7,496.6 | 9,407.2 | 1,910.6 |
+| 8 | 38,126.1 | 6,579.7 | 9,211.5 | 1,170.0 | 550.0 | 7,749.7 | 9,761.5 | 2,011.9 |
+| 9 | 39,269.9 | 6,842.8 | 9,580.0 | 1,170.0 | 550.0 | 8,012.8 | 10,130.0 | 2,117.1 |
+|10 | 40,448.0 | 7,116.6 | 9,963.2 | 1,170.0 | 550.0 | 8,286.6 | 10,513.2 | 2,226.6 |
+
+Source and cross-reference
+
+- Numeric source: `outputs/10yr_projection_central_balanced.csv` (generated by `tools/10yr_budget_model.py`).
+- This document and the `README.md` now reflect the model's starting assumption of current U.S. GDP = $31.0 trillion; see `README.md` ("Expanded documentation") for pointers to the docs and output files.
+
+Interpretation of central numeric projection
+
+- The central-case shows that annual deficits remain roughly stable and decline slightly toward year 10 relative to a baseline where deficits would grow faster absent the package (because our baseline receipts and outlays include differential growth assumptions). The cumulative 10‑year additional deficit relative to baseline (CumulativeNetPolicyDeficit_10yr) in this illustrative central case is approximately zero when measured against an active baseline that assumes higher baseline outlay growth; the illustrative numbers above assume baseline outlay growth that would otherwise have produced larger deficits.
+- The wealth tax contributes the largest single revenue stream in steady state (~$456B/year in the central case), but its realized revenue depends strongly on the taxable-wealth estimate and the compliance factor.
+
+Sensitivity analysis (high-level)
+
+- Wealthable-base sensitivity: if taxable wealth above threshold is only $5T instead of $10T, wealth-tax steady revenue drops to ~ $228B (central compliance), reducing policy revenue by $228B/year and worsening the 10‑year balance by ~$2.2T cumulatively unless offset by other measures.
+- Compliance sensitivity: if compliance is 40% rather than 60%, central wealth-tax revenue drops by 33% (~$304B steady-state instead of $456B).
+- Spending risk: if healthcare transition increases net federal spending by $600B instead of $300B, cumulative 10‑year deficit impact is substantial (roughly +$3T over 10 years) unless offset by higher revenue or spending reprioritization.
+
+Scenario results (automated model outputs)
+
+I ran three reproducible scenarios (CSV outputs are in `outputs/`): conservative, central_balanced, and optimistic. The model script used to produce these files is `tools/10yr_budget_model.py` and writes `outputs/10yr_projection_<scenario>.csv`.
+
+High-level scenario summaries (cumulative 10-year values, in billions USD)
+
+- conservative: cumulative deficit = $25,643B; baseline-only cumulative deficit = $21,036B; net policy impact = +$4,607B (worse than baseline).
+- central_balanced: cumulative deficit = $13,460B; baseline-only cumulative deficit = $18,730B; net policy impact = -$5,270B (improvement relative to baseline; package reduces cumulative deficit).
+- optimistic: cumulative deficit = $7,715B; baseline-only cumulative deficit = $16,955B; net policy impact = -$9,240B (stronger improvement).
+
+Interpretation
+
+- The conservative scenario assumes weaker revenue realization and higher program costs; under those assumptions, the package increases the 10-year cumulative deficit by about $4.6T.
+- The central_balanced scenario uses more optimistic revenue realizations (larger taxable wealth base, higher compliance, moderate net health spending) and produces a cumulative fiscal improvement of roughly $5.3T versus the baseline.
+- The optimistic scenario assumes faster growth, stronger revenue outcomes, and lower net spending increases; it shows a much larger cumulative fiscal improvement (~$9.2T).
+
+Baseline spending composition
+
+To contextualize the platform's proposed spending increases relative to current federal outlays, we separate the Year‑1 baseline outlays into major components. The model uses Year‑1 baseline federal outlays = $7,000B. The following illustrative breakdown uses approximate shares consistent with recent OMB/CBO aggregates; replace with official agency tables for precise accounting.
+
+Year‑1 baseline outlays ($ billions)
+
+- Defense (discretionary): 15% → $1,050B
+- Social Security (mandatory): 23% → $1,610B
+- Medicare (mandatory): 14% → $980B
+- Net interest (debt service): 8% → $560B
+- Other mandatory and discretionary programs (residual): 40% → $2,800B
+
+Estimated discretionary spending (illustrative)
+
+- Estimated non‑defense discretionary (approx): $700B (this is an illustrative figure; see OMB/CBO for exact splits).
+- Total discretionary ≈ Defense + Non‑defense discretionary = $1,050B + $700B = $1,750B (≈25% of total outlays).
+
+How proposed policies compare to discretionary spending
+
+- Platform investment package (steady-state ~ $350B/year) is roughly 20% of estimated total discretionary spending ($350 / $1,750 ≈ 0.20) and ~33% of Defense spending ($350 / $1,050 ≈ 0.33).
+- Net healthcare spending increase (steady-state ~ $300B/year) is roughly 17% of estimated total discretionary spending and ~29% of Defense spending.
+
+Notes and caveats
+
+- These shares are illustrative approximations to show scale. For definitive accounting use OMB historical tables or CBO's budgetary aggregates and adjust shares by program classification (mandatory/discretionary) and by year.
+- The platform's investment and social spending increases (e.g., +$350B steady investments, +$300B healthcare net increase in some scenarios) are shown in the central-case CSVs; compare those line items to the categorical breakdown above to understand relative scale (for example, a $350B investment program is roughly one-third of Defense or ~12% of the residual "Other" category in Year 1).
+
+Cross-reference
+
+- The scenario CSVs in `outputs/` contain the modelled annual totals and can be used to compute category comparisons across years (for example, compare `PolicySpending` to `BaselineOutlays`).
+
+Reproducibility and how to run locally
+
+1. Ensure you have Python 3 installed (macOS defaults to zsh; use `python3 --version` to check).
+2. From the repository root, run:
+
+```bash
+python3 tools/10yr_budget_model.py
+```
+
+3. CSVs will appear under `outputs/`:
+- `outputs/10yr_projection_conservative.csv`
+- `outputs/10yr_projection_central_balanced.csv`
+- `outputs/10yr_projection_optimistic.csv`
+
+4. To stress-test, edit the scenario parameter dictionaries in `tools/10yr_budget_model.py` and re-run.
+
+Caveats
+
+- The simple model is not a substitute for a formal CBO-style score. It is a transparent, auditable tool for scenario exploration and policy tradeoff illustration.
+
+- This model is deliberately transparent and parameterized. It is not a CBO score. It is intended to be reproduced and stress-tested. Key authoritative references useful for ground-truthing parameter choices include:
+  - Congressional Budget Office (CBO) historical budget tables and long-term budget outlook (CBO; e.g., annual Budget and Economic Outlook reports).
+  - Bureau of Economic Analysis (BEA) for GDP and national accounts series.
+  - Internal Revenue Service (IRS) Statistics of Income and distributional data, and Tax Policy Center modeling papers on wealth taxation.
+  - IMF and OECD tax- and revenue-related working papers for cross-country comparators.

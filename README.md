@@ -212,6 +212,11 @@ Model assumptions & verification
 * The reproducible 10-year budget model in `tools/10yr_budget_model.py` uses a starting (Year 1) nominal U.S. GDP of $31.0 trillion by default and a Year‑1 baseline federal outlays assumption of $7.0 trillion. The model writes scenario CSVs to the `outputs/` folder.
 * To verify numeric tables in the docs, open the generated CSVs in `outputs/` (for example `outputs/10yr_projection_central_balanced.csv`) and compare values to the table in `docs/13-economic-analysis-and-10-year-projections.md`.
 
+Website & GitHub Pages
+
+* An interactive portal is published via GitHub Pages from `index.html`. It provides full-text search, policy proposal cards, and an interactive 10-year budget model viewer across all scenarios.
+* To regenerate `index.html` after modifying documentation or model outputs, run: `python3 build_index.py`.
+
 Contributing
 
 To propose edits or expand these drafts, edit the corresponding file in `docs/` and submit a pull request. For substantial changes, add short implementation notes and any source references.

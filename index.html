@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Platform for a Democratic Socialist Government</title>
+  <meta name="description" content="Policy Framework, Legislative Priorities, and 10-Year Reproducible Budget Model.">
+  <meta property="og:title" content="Platform for a Democratic Socialist Government">
+  <meta property="og:description" content="A comprehensive platform of economic reform, democratic reconstruction, and reproducible 10-year budget projections.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#dc2626">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌹</text></svg>">
+  
+  <style>
+    :root {
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --font-serif: "Charter", "Georgia", "Cambria", serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+      --bg-body: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-surface-elevated: #ffffff;
+      --bg-sidebar: #f1f5f9;
+      --bg-muted: #e2e8f0;
+      --bg-accent-subtle: #fef2f2;
+      --bg-accent-border: #fecaca;
+      --bg-highlight: #fef3c7;
+      
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-light: #64748b;
+      --text-accent: #dc2626;
+
+      --border-color: #e2e8f0;
+      --border-strong: #cbd5e1;
+
+      --primary: #dc2626;
+      --primary-hover: #b91c1c;
+      --primary-focus: rgba(220, 38, 38, 0.25);
+      
+      --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+      --card-shadow-hover: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      
+      --sidebar-width: 320px;
+      --header-height: 64px;
+      --content-max-width: 860px;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 14px;
+      --transition-fast: 0.15s ease;
+    }
+
+    [data-theme="dark"] {
+      --bg-body: #090d16;
+      --bg-surface: #111827;
+      --bg-surface-elevated: #1f2937;
+      --bg-sidebar: #0e1422;
+      --bg-muted: #1e293b;
+      --bg-accent-subtle: rgba(239, 68, 68, 0.12);
+      --bg-accent-border: rgba(239, 68, 68, 0.28);
+      --bg-highlight: rgba(245, 158, 11, 0.2);
+
+      --text-main: #f8fafc;
+      --text-muted: #cbd5e1;
+      --text-light: #94a3b8;
+      --text-accent: #f87171;
+
+      --border-color: #1f2937;
+      --border-strong: #374151;
+
+      --primary: #ef4444;
+      --primary-hover: #f87171;
+      --primary-focus: rgba(239, 68, 68, 0.35);
+
+      --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+      --card-shadow-hover: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: var(--font-sans);
+      color: var(--text-main);
+      background-color: var(--bg-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Layout */
+    .app-container {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    .site-header {
+      height: var(--header-height);
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1.5rem;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .menu-toggle-btn {
+      display: none;
+      background: none;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      color: var(--text-main);
+      padding: 0.4rem;
+      cursor: pointer;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--text-main);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .logo-icon {
+      width: 28px;
+      height: 28px;
+      fill: var(--primary);
+    }
+
+    .header-center {
+      flex: 1;
+      max-width: 440px;
+      margin: 0 1.5rem;
+      position: relative;
+    }
+
+    .search-input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+
+    .search-input-wrapper svg {
+      position: absolute;
+      left: 0.75rem;
+      width: 16px;
+      height: 16px;
+      fill: var(--text-light);
+      pointer-events: none;
+    }
+
+    .search-input {
+      width: 100%;
+      height: 36px;
+      padding: 0 2.2rem 0 2.2rem;
+      border-radius: 9999px;
+      border: 1px solid var(--border-color);
+      background: var(--bg-sidebar);
+      color: var(--text-main);
+      font-size: 0.875rem;
+      outline: none;
+      transition: all var(--transition-fast);
+    }
+
+    .search-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-focus);
+      background: var(--bg-surface);
+    }
+
+    .search-shortcut {
+      position: absolute;
+      right: 0.6rem;
+      font-size: 0.7rem;
+      padding: 0.15rem 0.35rem;
+      background: var(--border-color);
+      color: var(--text-muted);
+      border-radius: 4px;
+      pointer-events: none;
+    }
+
+    .search-results-dropdown {
+      position: absolute;
+      top: 42px;
+      left: 0;
+      right: 0;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.15);
+      max-height: 420px;
+      overflow-y: auto;
+      display: none;
+      z-index: 100;
+    }
+
+    .search-results-dropdown.active {
+      display: block;
+    }
+
+    .search-result-item {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border-color);
+      cursor: pointer;
+      display: block;
+      color: var(--text-main);
+    }
+
+    .search-result-item:hover, .search-result-item.selected {
+      background: var(--bg-muted);
+      text-decoration: none;
+    }
+
+    .search-result-title {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--primary);
+    }
+
+    .search-result-snippet {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .btn-icon {
+      background: none;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      color: var(--text-main);
+      padding: 0.45rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition-fast);
+    }
+
+    .btn-icon:hover {
+      background: var(--bg-muted);
+      border-color: var(--border-strong);
+    }
+
+    .btn-icon svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    /* Main body layout */
+    .app-main {
+      display: flex;
+      flex: 1;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: var(--sidebar-width);
+      min-width: var(--sidebar-width);
+      background: var(--bg-sidebar);
+      border-right: 1px solid var(--border-color);
+      height: calc(100vh - var(--header-height));
+      position: sticky;
+      top: var(--header-height);
+      overflow-y: auto;
+      padding: 1.25rem 0.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .sidebar-section-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-light);
+      padding: 0 0.75rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .nav-item a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.45rem 0.75rem;
+      border-radius: var(--radius-sm);
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all var(--transition-fast);
+      text-decoration: none;
+    }
+
+    .nav-item a:hover {
+      background: var(--bg-muted);
+      color: var(--text-main);
+    }
+
+    .nav-item.active a {
+      background: var(--bg-accent-subtle);
+      color: var(--primary);
+      font-weight: 600;
+      border-left: 3px solid var(--primary);
+    }
+
+    .nav-num {
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      opacity: 0.85;
+      min-width: 1.8rem;
+    }
+
+    /* Content Area */
+    .content-area {
+      flex: 1;
+      padding: 2.5rem 2rem 4rem 2rem;
+      max-width: calc(var(--content-max-width) + 4rem);
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    /* Hero / Header of doc */
+    .doc-hero {
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 1.5rem;
+    }
+
+    .badge-category {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--primary);
+      background: var(--bg-accent-subtle);
+      border: 1px solid var(--bg-accent-border);
+      padding: 0.25rem 0.6rem;
+      border-radius: 9999px;
+      margin-bottom: 0.75rem;
+    }
+
+    .doc-title {
+      font-size: 2.15rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--text-main);
+      margin-bottom: 0.75rem;
+      font-family: var(--font-sans);
+    }
+
+    .doc-meta-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: 1rem;
+      font-size: 0.825rem;
+      color: var(--text-light);
+    }
+
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.65rem;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      text-decoration: none;
+    }
+
+    .btn-action:hover {
+      background: var(--bg-muted);
+      color: var(--text-main);
+      text-decoration: none;
+    }
+
+    .btn-action svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+    }
+
+    /* Callout & Summary boxes */
+    .summary-card {
+      background: var(--bg-accent-subtle);
+      border: 1px solid var(--bg-accent-border);
+      border-left: 4px solid var(--primary);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .summary-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--primary);
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .summary-text {
+      font-size: 1rem;
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    /* Section Headings */
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin: 2rem 0 1rem 0;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Policy items grid/cards */
+    .policy-items-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .policy-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.5rem;
+      box-shadow: var(--card-shadow);
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+      position: relative;
+    }
+
+    .policy-card:hover {
+      box-shadow: var(--card-shadow-hover);
+      border-color: var(--border-strong);
+    }
+
+    .policy-card-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--text-main);
+      margin-bottom: 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .policy-card-bullet {
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .policy-card-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+
+    /* Implementation card */
+    .impl-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .impl-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-light);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .impl-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    /* Markdown rendered typography */
+    .markdown-body {
+      font-size: 1rem;
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+
+    .markdown-body h1, .markdown-body h2, .markdown-body h3 {
+      color: var(--text-main);
+      margin-top: 1.8rem;
+      margin-bottom: 0.8rem;
+      font-weight: 700;
+    }
+
+    .markdown-body h1 { font-size: 1.85rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; }
+    .markdown-body h2 { font-size: 1.4rem; }
+    .markdown-body h3 { font-size: 1.15rem; }
+
+    .markdown-body p {
+      margin-bottom: 1rem;
+    }
+
+    .markdown-body ul, .markdown-body ol {
+      margin-bottom: 1.25rem;
+      padding-left: 1.75rem;
+    }
+
+    .markdown-body li {
+      margin-bottom: 0.4rem;
+    }
+
+    .markdown-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.875rem;
+      overflow-x: auto;
+      display: block;
+    }
+
+    .markdown-body th, .markdown-body td {
+      padding: 0.65rem 0.9rem;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+
+    .markdown-body th {
+      background: var(--bg-muted);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .markdown-body td.num, .markdown-body th.num {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .markdown-body tr:nth-child(even) {
+      background: var(--bg-sidebar);
+    }
+
+    .markdown-body blockquote {
+      border-left: 4px solid var(--primary);
+      padding: 0.5rem 1rem;
+      background: var(--bg-accent-subtle);
+      color: var(--text-muted);
+      margin: 1rem 0;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+
+    .markdown-body hr {
+      border: 0;
+      height: 1px;
+      background: var(--border-color);
+      margin: 2.5rem 0;
+    }
+
+    /* Table styles for Budget Model */
+    .scenario-tabs {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.5rem;
+    }
+
+    .scenario-tab-btn {
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      background: var(--bg-surface);
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+
+    .scenario-tab-btn:hover {
+      background: var(--bg-muted);
+      color: var(--text-main);
+    }
+
+    .scenario-tab-btn.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #ffffff;
+    }
+
+    .metrics-summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .metric-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1rem;
+      box-shadow: var(--card-shadow);
+    }
+
+    .metric-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-light);
+      margin-bottom: 0.35rem;
+    }
+
+    .metric-value {
+      font-size: 1.45rem;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+      color: var(--text-main);
+    }
+
+    .metric-subtext {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
+
+    .table-responsive-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      margin-bottom: 2rem;
+      background: var(--bg-surface);
+      box-shadow: var(--card-shadow);
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+    }
+
+    .data-table th, .data-table td {
+      padding: 0.65rem 0.85rem;
+      border-bottom: 1px solid var(--border-color);
+      white-space: nowrap;
+    }
+
+    .data-table th {
+      background: var(--bg-sidebar);
+      font-weight: 700;
+      color: var(--text-main);
+      text-align: right;
+    }
+
+    .data-table th:first-child, .data-table td:first-child {
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .data-table td {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+      color: var(--text-muted);
+    }
+
+    .data-table tbody tr:hover {
+      background: var(--bg-muted);
+    }
+
+    .data-table tfoot tr {
+      font-weight: 700;
+      background: var(--bg-sidebar);
+      border-top: 2px solid var(--border-strong);
+    }
+
+    .data-table tfoot td {
+      color: var(--text-main);
+    }
+
+    /* Pagination / Next doc footer */
+    .doc-nav-footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 3.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .doc-nav-btn {
+      display: flex;
+      flex-direction: column;
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      background: var(--bg-surface);
+      color: var(--text-main);
+      text-decoration: none;
+      transition: all var(--transition-fast);
+      max-width: 48%;
+    }
+
+    .doc-nav-btn:hover {
+      border-color: var(--primary);
+      background: var(--bg-accent-subtle);
+      text-decoration: none;
+    }
+
+    .doc-nav-label {
+      font-size: 0.725rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--text-light);
+    }
+
+    .doc-nav-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-top: 0.2rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .doc-nav-btn.next {
+      text-align: right;
+      margin-left: auto;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--text-main);
+      color: var(--bg-body);
+      padding: 0.6rem 1.2rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.25s ease;
+      z-index: 999;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* View Mode Toggler */
+    .view-mode-toggle {
+      display: inline-flex;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      background: var(--bg-surface);
+    }
+
+    .view-mode-btn {
+      padding: 0.3rem 0.65rem;
+      background: none;
+      border: none;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+
+    .view-mode-btn.active {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 900px) {
+      .sidebar {
+        position: fixed;
+        left: -100%;
+        top: var(--header-height);
+        height: calc(100vh - var(--header-height));
+        z-index: 45;
+        transition: left 0.25s ease;
+        box-shadow: 10px 0 25px rgba(0,0,0,0.1);
+      }
+
+      .sidebar.open {
+        left: 0;
+      }
+
+      .menu-toggle-btn {
+        display: flex;
+      }
+
+      .content-area {
+        padding: 1.5rem 1rem 3rem 1rem;
+      }
+
+      .header-center {
+        display: none;
+      }
+
+      .header-center.mobile-open {
+        display: block;
+        position: absolute;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        max-width: none;
+        margin: 0;
+        padding: 0.75rem 1rem;
+        background: var(--bg-surface);
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+      }
+
+      .doc-title {
+        font-size: 1.65rem;
+      }
+    }
+
+    /* Print Styles */
+    @media print {
+      .site-header, .sidebar, .doc-nav-footer, .doc-meta-actions, .view-mode-toggle, .scenario-tabs {
+        display: none !important;
+      }
+      .app-main {
+        display: block;
+      }
+      .content-area {
+        max-width: 100%;
+        padding: 0;
+      }
+      body {
+        background: #fff;
+        color: #000;
+      }
+      .policy-card {
+        border: 1px solid #ccc;
+        box-shadow: none;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="header-left">
+        <button class="menu-toggle-btn" id="menuToggleBtn" aria-label="Toggle navigation menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </button>
+        <a href="#overview" class="logo-container">
+          <svg class="logo-icon" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+          </svg>
+          <span>Democratic Socialist Agenda</span>
+        </a>
+      </div>
+
+      <div class="header-center" id="searchHeaderCenter">
+        <div class="search-input-wrapper">
+          <svg viewBox="0 0 24 24">
+            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+          </svg>
+          <input type="text" id="searchInput" class="search-input" placeholder="Search policies, revenue, sections..." autocomplete="off">
+          <span class="search-shortcut">/</span>
+        </div>
+        <div class="search-results-dropdown" id="searchResultsDropdown"></div>
+      </div>
+
+      <div class="header-right">
+        <button class="btn-icon" id="themeToggleBtn" title="Toggle Light/Dark Theme" aria-label="Toggle Theme">
+          <svg id="themeIconSun" viewBox="0 0 24 24" style="display:none;">
+            <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>
+          </svg>
+          <svg id="themeIconMoon" viewBox="0 0 24 24">
+            <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/>
+          </svg>
+        </button>
+        <a href="https://github.com/glenpierce/newDemocraticSocialistAgendaProposal" target="_blank" rel="noopener noreferrer" class="btn-icon" title="View repository on GitHub">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+          </svg>
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Body -->
+    <div class="app-main">
+      <!-- Sidebar -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-group">
+          <div class="sidebar-section-title">Core Document</div>
+          <ul class="nav-list">
+            <li class="nav-item" id="nav-overview">
+              <a href="#overview">
+                <span>📜</span>
+                <span>Platform Overview</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-section-title">Detailed Policy Drafts</div>
+          <ul class="nav-list" id="policyNavList">
+            <!-- Injected dynamically -->
+          </ul>
+        </div>
+
+        <div class="sidebar-group">
+          <div class="sidebar-section-title">Fiscal Projections</div>
+          <ul class="nav-list">
+            <li class="nav-item" id="nav-budget-model">
+              <a href="#budget-model">
+                <span>📊</span>
+                <span>10-Year Budget Model</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Content Area -->
+      <main class="content-area" id="contentArea">
+        <!-- Rendered dynamically -->
+      </main>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Link copied to clipboard</div>
+
+  <!-- CDN Marked with fallback -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+
+  <!-- Embedded Platform Data -->
+  <script>
+    const SITE_DATA = {"readme": "# Platform for a Democratic Socialist Government\n\n**Policy Framework and Legislative Priorities**\n\n## Introduction\n\nThe United States has the productive capacity, technical expertise, and financial resources to provide economic security, political stability, and broad prosperity. Persistent inequality, institutional dysfunction, and declining public trust are the result of policy design choices, not structural inevitabilities.\n\nThis platform outlines a comprehensive program of economic reform, democratic reconstruction, and public investment intended to restore institutional capacity and align governance with the public interest.\n\n---\n\n## I. Fiscal Policy and Wealth Concentration\n\n### Wealth Taxation\n\nThe party supports an **annual 8 percent tax on net assets exceeding $100 million**.\n\nImplementation will include:\n\n* Comprehensive asset disclosure requirements\n* Consolidated treatment of trusts, shell corporations, and offshore holdings\n* Valuation standards enforced by a specialized federal unit\n* Automatic information sharing between tax authorities and financial institutions\n\nRevenue will be directed toward healthcare, education, infrastructure, and scientific research.\n\n### Wages and Income Policy\n\n* Increase the federal minimum wage to a level consistent with regional cost-of-living data\n* Index the minimum wage to inflation through automatic adjustment\n* Expand enforcement capacity for wage theft, misclassification, and unpaid overtime\n\n### Universal Basic Income\n\nThe party supports a phased introduction of **Universal Basic Income**, beginning with pilot programs and expanding based on measured economic and labor-market effects.\n\n---\n\n## II. Healthcare System Reform\n\n### Universal Public Healthcare\n\nThe party supports the establishment of **Medicare for All** as a single-payer national healthcare system.\n\nKey components:\n\n* Elimination of private health insurance markets for covered services\n* Universal enrollment\n* Comprehensive coverage including primary care, hospitalization, mental health, prescription drugs, and long-term care\n* Centralized negotiation of pharmaceutical prices\n\nHealthcare financing will be decoupled from employment.\n\n---\n\n## III. Democratic Reform and Electoral Integrity\n\n### Campaign Finance\n\n* Overturn the legal framework established by *Citizens United*\n* Establish federally funded elections\n* Prohibit corporate and high-net-worth individual campaign contributions\n\n### Legislative Drafting\n\n* Transfer primary legislative drafting authority to professional, nonpartisan policy staff\n* Require public documentation of research sources and economic assumptions\n* Limit the role of lobbyists to public testimony and written submissions\n\n---\n\n## IV. Structural Reform of Federal Government\n\n### Supreme Court Reform\n\n* Establish fixed terms for Supreme Court justices\n* Require compliance with a binding judicial ethics code\n* Limit presidential nominations to one justice per term\n* Require congressional votes on all nominations within a defined timeframe\n\n### Legislative Structure\n\n* Replace the bicameral legislature with a unicameral body\n* Apportion representation strictly by population\n* Transition toward a parliamentary-style system in which executive leadership is accountable to the legislature\n\n### Voting System Reform\n\n* Eliminate first-past-the-post voting\n* Implement ranked-choice voting nationwide\n* Establish snap elections when governments fail confidence votes or core legislative thresholds\n\n---\n\n## V. Rule of Law and Institutional Accountability\n\nThe party supports the investigation and prosecution of criminal violations committed by public officials, federal agencies, and associated actors.\n\n* Prosecutorial decisions will be based on evidentiary standards and statutory authority\n* Executive clemency powers will not be used to obstruct judicial proceedings\n* Oversight mechanisms will be strengthened to prevent future abuses of authority\n\n---\n\n## VI. Competition, Labor Rights, and Market Regulation\n\n### Antitrust Enforcement\n\n* Expand federal antitrust capacity\n* Restore structural remedies, including breakups\n* Prohibit anticompetitive mergers and predatory pricing\n\n### Labor Protection\n\n* Enforce penalties for union suppression\n* Expand collective bargaining rights\n* Increase penalties for wage theft and retaliation\n\n### Intellectual Property Reform\n\n* Limit abusive patent litigation\n* Reform intellectual property law to prioritize innovation and public benefit\n\n---\n\n## VII. Climate and Energy Policy\n\n### Green New Deal\n\nThe party supports a comprehensive climate and industrial policy that includes:\n\n* Rapid transition to renewable energy\n* Federal investment in energy infrastructure\n* Job creation tied to domestic manufacturing and skilled labor\n* Climate resilience planning at the federal, state, and local levels\n\n---\n\n## VIII. Education Policy\n\n### K\u201312 Education\n\n* Replace property-tax-based funding with federal equalization\n* Increase funding for remedial education, tutoring, and summer instruction\n* Reduce student-to-teacher ratios\n* Raise teacher compensation and establish national salary standards\n\n### Higher Education\n\n* Eliminate tuition at public colleges and universities\n* Increase federal support for research institutions\n* Cancel interest accrual on existing federal student loans\n\n---\n\n## IX. Transportation and Traffic Safety\n\n* Close fuel-efficiency loopholes related to vehicle classification\n* Expand automated traffic enforcement where supported by safety data\n* Invest in traffic-calming infrastructure and public transit\n* Align transportation policy with emissions and safety targets\n\n---\n\n## X. Public Safety and Law Enforcement Oversight\n\n* Establish an independent federal body to investigate police misconduct\n* Reform qualified immunity to allow civil accountability for constitutional violations\n* Require professional liability insurance for law enforcement officers\n* Expand training, certification, and decertification standards\n\n---\n\n## XI. Science, Technology, and Public Ownership\n\n* Increase federal funding for scientific research\n* Require public ownership or licensing of technologies developed with public funds\n* Prevent exclusive privatization of publicly financed pharmaceutical research\n\n---\n\n## XII. Housing, Mental Health, and Social Services\n\n* Expand public housing and supportive housing programs\n* Integrate mental health and addiction treatment into primary care systems\n* Establish long-term treatment pathways for individuals requiring intensive support\n* Coordinate housing, healthcare, and social services at the federal level\n\n---\n\n## Expanded documentation\n\nDetailed implementation drafts for each major section are available in the `docs/` folder. These files expand on the high-level proposals in this README with policy items, implementation notes, and suggested metrics.\n\n- [I. Fiscal Policy and Wealth Concentration](docs/01-fiscal-policy-and-wealth-concentration.md)\n- [II. Healthcare System Reform](docs/02-healthcare-system-reform.md)\n- [III. Democratic Reform and Electoral Integrity](docs/03-democratic-reform-and-electoral-integrity.md)\n- [IV. Structural Reform of Federal Government](docs/04-structural-reform-of-federal-government.md)\n- [V. Rule of Law and Institutional Accountability](docs/05-rule-of-law-and-institutional-accountability.md)\n- [VI. Competition, Labor Rights, and Market Regulation](docs/06-competition-labor-rights-and-market-regulation.md)\n- [VII. Climate and Energy Policy](docs/07-climate-and-energy-policy.md)\n- [VIII. Education Policy](docs/08-education-policy.md)\n- [IX. Transportation and Traffic Safety](docs/09-transportation-and-traffic-safety.md)\n- [X. Public Safety and Law Enforcement Oversight](docs/10-public-safety-and-law-enforcement-oversight.md)\n- [XI. Science, Technology, and Public Ownership](docs/11-science-technology-and-public-ownership.md)\n- [XII. Housing, Mental Health, and Social Services](docs/12-housing-mental-health-and-social-services.md)\n- [XIII. Economic analysis and 10-year projections](docs/13-economic-analysis-and-10-year-projections.md)\n\nModel assumptions & verification\n\n* The reproducible 10-year budget model in `tools/10yr_budget_model.py` uses a starting (Year 1) nominal U.S. GDP of $31.0 trillion by default and a Year\u20111 baseline federal outlays assumption of $7.0 trillion. The model writes scenario CSVs to the `outputs/` folder.\n* To verify numeric tables in the docs, open the generated CSVs in `outputs/` (for example `outputs/10yr_projection_central_balanced.csv`) and compare values to the table in `docs/13-economic-analysis-and-10-year-projections.md`.\n\nWebsite & GitHub Pages\n\n* An interactive portal is published via GitHub Pages from `index.html`. It provides full-text search, policy proposal cards, and an interactive 10-year budget model viewer across all scenarios.\n* To regenerate `index.html` after modifying documentation or model outputs, run: `python3 build_index.py`.\n\nContributing\n\nTo propose edits or expand these drafts, edit the corresponding file in `docs/` and submit a pull request. For substantial changes, add short implementation notes and any source references.\n\n---\n\n## Conclusion\n\nThis platform is designed to restore institutional capacity, reduce inequality, and align public policy with democratic governance. Its proposals emphasize enforceability, administrative feasibility, and long-term sustainability.\n\nThe objective is a government that functions predictably, governs competently, and serves the public interest.\n", "docs": [{"id": "01-fiscal-policy-and-wealth-concentration", "filename": "01-fiscal-policy-and-wealth-concentration.md", "title": "I. Fiscal Policy and Wealth Concentration", "summary": "A fiscal framework to reduce wealth concentration and increase revenue for public investment through progressive taxation, stronger enforcement, and targeted spending. Policies focus on wealth taxation, progressive income tax, strengthened reporting, and mechanisms to direct revenues toward healthcare, education, and infrastructure.", "policy_items": ["Wealth Taxation \u2014 An annual net-asset tax on very high-net-worth households to capture unrealized wealth and reduce extreme concentration.", "Asset Disclosure & Valuation \u2014 Mandatory, standardized asset disclosure and valuation rules enforced by a dedicated Treasury unit; close loopholes for trusts and offshore holdings.", "Corporate Tax Reform \u2014 Minimum corporate tax, anti-avoidance rules, and tighter transfer pricing enforcement to ensure multinational firms pay their share.", "Capital Gains Reform \u2014 Align capital gains rates with ordinary income for top brackets and consider mark-to-market treatment for large portfolios.", "Estate & Gift Tax Modernization \u2014 Strengthen estate tax thresholds and anti-avoidance provisions to limit intergenerational wealth concentration.", "Tax Enforcement Capacity \u2014 Increase IRS audit funding, data-sharing agreements, and technology for automated compliance targeting.", "Redistribution & Earmarks \u2014 Direct new revenue to pre-specified public investments (healthcare, education, infrastructure, research) with transparent budgeting rules.", "Anti-Evasion Measures \u2014 Enhance international cooperation, beneficial ownership registries, and penalties for noncompliance."], "implementation": "Primary administration would be by the Department of the Treasury and the Internal Revenue Service, with coordination from the Office of Management and Budget for budgetary routing. Metrics: revenue collected from wealth tax, audit coverage rates, effective tax rates on top percentiles, and capital concentration indices. Implementation steps include drafting statutory language, phased implementation windows, pilot valuation rules, and a dedicated enforcement unit funded through the budget process.", "content": "# I. Fiscal Policy and Wealth Concentration\n\nSummary\n\nA fiscal framework to reduce wealth concentration and increase revenue for public investment through progressive taxation, stronger enforcement, and targeted spending. Policies focus on wealth taxation, progressive income tax, strengthened reporting, and mechanisms to direct revenues toward healthcare, education, and infrastructure.\n\nPolicy items\n\n- Wealth Taxation \u2014 An annual net-asset tax on very high-net-worth households to capture unrealized wealth and reduce extreme concentration.\n- Asset Disclosure & Valuation \u2014 Mandatory, standardized asset disclosure and valuation rules enforced by a dedicated Treasury unit; close loopholes for trusts and offshore holdings.\n- Corporate Tax Reform \u2014 Minimum corporate tax, anti-avoidance rules, and tighter transfer pricing enforcement to ensure multinational firms pay their share.\n- Capital Gains Reform \u2014 Align capital gains rates with ordinary income for top brackets and consider mark-to-market treatment for large portfolios.\n- Estate & Gift Tax Modernization \u2014 Strengthen estate tax thresholds and anti-avoidance provisions to limit intergenerational wealth concentration.\n- Tax Enforcement Capacity \u2014 Increase IRS audit funding, data-sharing agreements, and technology for automated compliance targeting.\n- Redistribution & Earmarks \u2014 Direct new revenue to pre-specified public investments (healthcare, education, infrastructure, research) with transparent budgeting rules.\n- Anti-Evasion Measures \u2014 Enhance international cooperation, beneficial ownership registries, and penalties for noncompliance.\n\nImplementation & Administration\n\nPrimary administration would be by the Department of the Treasury and the Internal Revenue Service, with coordination from the Office of Management and Budget for budgetary routing. Metrics: revenue collected from wealth tax, audit coverage rates, effective tax rates on top percentiles, and capital concentration indices. Implementation steps include drafting statutory language, phased implementation windows, pilot valuation rules, and a dedicated enforcement unit funded through the budget process.\n"}, {"id": "02-healthcare-system-reform", "filename": "02-healthcare-system-reform.md", "title": "II. Healthcare System Reform", "summary": "A single-payer public healthcare system to ensure universal coverage, comprehensive benefits, and cost control through centralized negotiation and simplified administration.", "policy_items": ["Single-Payer Coverage \u2014 Universal enrollment through a Medicare-for-All-style program covering primary care, hospitals, mental health, long-term care, and prescription drugs.", "Benefits Standardization \u2014 Define a comprehensive benefits package and update regularly through an expert advisory board.", "Provider Payment Reform \u2014 Move toward value-based payments, bundled payments, and standard fee schedules to control costs and incentivize outcomes.", "Drug Price Negotiation \u2014 Centralize negotiation of pharmaceutical prices and allow importation or reference pricing where appropriate.", "Transition Mechanisms \u2014 Phased transition from employer-based coverage, with timelines, buyouts, or conversions for existing plans and providers.", "Health Workforce Planning \u2014 Federal investment in training, recruitment, and distribution of primary care and mental health professionals.", "Administrative Simplification \u2014 Consolidate billing and claims systems, reduce overhead, and invest in interoperable health IT.", "Financing Framework \u2014 Dedicated revenue sources (progressive taxes, payroll adjustments, and reallocation of current public spending) and fiscal sustainability rules."], "implementation": "The Centers for Medicare & Medicaid Services (CMS) would lead program design and implementation in coordination with HHS, SSA (for eligibility), and state partners for service delivery. Key metrics: coverage rate, per-capita health spending trends, wait times for core services, and out-of-pocket spending. Implementation will proceed in phases with pilot regions, federal-state agreements, provider payment pilots, and statutory financing measures enacted to secure funding and legal authority.", "content": "# II. Healthcare System Reform\n\nSummary\n\nA single-payer public healthcare system to ensure universal coverage, comprehensive benefits, and cost control through centralized negotiation and simplified administration.\n\nPolicy items\n\n- Single-Payer Coverage \u2014 Universal enrollment through a Medicare-for-All-style program covering primary care, hospitals, mental health, long-term care, and prescription drugs.\n- Benefits Standardization \u2014 Define a comprehensive benefits package and update regularly through an expert advisory board.\n- Provider Payment Reform \u2014 Move toward value-based payments, bundled payments, and standard fee schedules to control costs and incentivize outcomes.\n- Drug Price Negotiation \u2014 Centralize negotiation of pharmaceutical prices and allow importation or reference pricing where appropriate.\n- Transition Mechanisms \u2014 Phased transition from employer-based coverage, with timelines, buyouts, or conversions for existing plans and providers.\n- Health Workforce Planning \u2014 Federal investment in training, recruitment, and distribution of primary care and mental health professionals.\n- Administrative Simplification \u2014 Consolidate billing and claims systems, reduce overhead, and invest in interoperable health IT.\n- Financing Framework \u2014 Dedicated revenue sources (progressive taxes, payroll adjustments, and reallocation of current public spending) and fiscal sustainability rules.\n\nImplementation & Administration\n\nThe Centers for Medicare & Medicaid Services (CMS) would lead program design and implementation in coordination with HHS, SSA (for eligibility), and state partners for service delivery. Key metrics: coverage rate, per-capita health spending trends, wait times for core services, and out-of-pocket spending. Implementation will proceed in phases with pilot regions, federal-state agreements, provider payment pilots, and statutory financing measures enacted to secure funding and legal authority.\n"}, {"id": "03-democratic-reform-and-electoral-integrity", "filename": "03-democratic-reform-and-electoral-integrity.md", "title": "III. Democratic Reform and Electoral Integrity", "summary": "Reforms to reduce the influence of money in politics, improve legislative transparency, and strengthen electoral integrity through public financing and structural safeguards.", "policy_items": ["Campaign Finance Reform \u2014 Establish public financing mechanisms, contribution limits, and disclosure rules to reduce private money influence.", "Citizens United Response \u2014 Seek legislative and constitutional pathways to limit corporate election spending and increase disclosure.", "Federally Funded Elections \u2014 Pilot and scale matching funds, vouchers, or grants to finance competitive campaigns.", "Lobbying Transparency \u2014 Centralize a public registry for lobbyists, disclose meetings and contributions, and limit in-kind campaign support.", "Nonpartisan Drafting \u2014 Build a professional legislative drafting office to produce publicly documented bill texts and impact assessments.", "Voting Access & Security \u2014 Secure voter registration systems, expand early and mail voting, and standardize ballot design to reduce errors.", "Redistricting Reform \u2014 Independent commissions, clear criteria, and public participation to end partisan gerrymandering.", "Electoral System Modernization \u2014 Implement nationwide ranked-choice voting and explore proportional representation in pilot jurisdictions."], "implementation": "The Federal Election Commission (or a reformed successor body), the Department of Justice (for enforcement), and state election officials will coordinate implementation. Metrics: campaign spending concentration, number of publicly financed campaigns, turnout rates, incidence of disputed results, and redistricting compliance. Legal change may require federal legislation, incentives to states, and where necessary, constitutional processes for major structural reforms.", "content": "# III. Democratic Reform and Electoral Integrity\n\nSummary\n\nReforms to reduce the influence of money in politics, improve legislative transparency, and strengthen electoral integrity through public financing and structural safeguards.\n\nPolicy items\n\n- Campaign Finance Reform \u2014 Establish public financing mechanisms, contribution limits, and disclosure rules to reduce private money influence.\n- Citizens United Response \u2014 Seek legislative and constitutional pathways to limit corporate election spending and increase disclosure.\n- Federally Funded Elections \u2014 Pilot and scale matching funds, vouchers, or grants to finance competitive campaigns.\n- Lobbying Transparency \u2014 Centralize a public registry for lobbyists, disclose meetings and contributions, and limit in-kind campaign support.\n- Nonpartisan Drafting \u2014 Build a professional legislative drafting office to produce publicly documented bill texts and impact assessments.\n- Voting Access & Security \u2014 Secure voter registration systems, expand early and mail voting, and standardize ballot design to reduce errors.\n- Redistricting Reform \u2014 Independent commissions, clear criteria, and public participation to end partisan gerrymandering.\n- Electoral System Modernization \u2014 Implement nationwide ranked-choice voting and explore proportional representation in pilot jurisdictions.\n\nImplementation & Administration\n\nThe Federal Election Commission (or a reformed successor body), the Department of Justice (for enforcement), and state election officials will coordinate implementation. Metrics: campaign spending concentration, number of publicly financed campaigns, turnout rates, incidence of disputed results, and redistricting compliance. Legal change may require federal legislation, incentives to states, and where necessary, constitutional processes for major structural reforms.\n"}, {"id": "04-structural-reform-of-federal-government", "filename": "04-structural-reform-of-federal-government.md", "title": "IV. Structural Reform of Federal Government", "summary": "Institutional reforms to improve accountability, reduce polarization, and increase democratic responsiveness through changes to judiciary, legislative structure, and executive-legislative relations.", "policy_items": ["Supreme Court Terms \u2014 Implement fixed, staggered terms for justices and adopt binding judicial ethics standards.", "Judicial Ethics & Oversight \u2014 Establish disciplinary mechanisms, transparency rules, and recusal standards for federal judges.", "Legislative Restructuring \u2014 Study transition pathways to a unicameral or rebalanced legislature with representation strictly by population.", "Executive Accountability \u2014 Strengthen oversight, slow-roll appointment limits, and parliamentary-style confidence mechanisms for executive leadership.", "Nomination & Confirmation Reform \u2014 Timelines for Senate action on nominations and reductions in arbitrary holds or filibusters for confirmations.", "Institutional Staffing \u2014 Shift professional legislative drafting and research to nonpartisan career staff with public documentation requirements.", "Decentralized Pilot Reforms \u2014 Use federal pilot programs for structural changes (e.g., state-level unicameral trials or alternate voting systems)."], "implementation": "These reforms will require combinations of federal legislation, constitutional amendments, and state-level experimentation. Key actors include Congress, the judiciary through internal rule changes, and interbranch commissions. Metrics: nomination timelines, public trust indicators, legislative output and quality measures, and frequency of ethics violations. Implementation should prioritize incremental, legally-sound steps and include sunset/pilot provisions to evaluate consequences before wide adoption.", "content": "# IV. Structural Reform of Federal Government\n\nSummary\n\nInstitutional reforms to improve accountability, reduce polarization, and increase democratic responsiveness through changes to judiciary, legislative structure, and executive-legislative relations.\n\nPolicy items\n\n- Supreme Court Terms \u2014 Implement fixed, staggered terms for justices and adopt binding judicial ethics standards.\n- Judicial Ethics & Oversight \u2014 Establish disciplinary mechanisms, transparency rules, and recusal standards for federal judges.\n- Legislative Restructuring \u2014 Study transition pathways to a unicameral or rebalanced legislature with representation strictly by population.\n- Executive Accountability \u2014 Strengthen oversight, slow-roll appointment limits, and parliamentary-style confidence mechanisms for executive leadership.\n- Nomination & Confirmation Reform \u2014 Timelines for Senate action on nominations and reductions in arbitrary holds or filibusters for confirmations.\n- Institutional Staffing \u2014 Shift professional legislative drafting and research to nonpartisan career staff with public documentation requirements.\n- Decentralized Pilot Reforms \u2014 Use federal pilot programs for structural changes (e.g., state-level unicameral trials or alternate voting systems).\n\nImplementation & Administration\n\nThese reforms will require combinations of federal legislation, constitutional amendments, and state-level experimentation. Key actors include Congress, the judiciary through internal rule changes, and interbranch commissions. Metrics: nomination timelines, public trust indicators, legislative output and quality measures, and frequency of ethics violations. Implementation should prioritize incremental, legally-sound steps and include sunset/pilot provisions to evaluate consequences before wide adoption.\n"}, {"id": "05-rule-of-law-and-institutional-accountability", "filename": "05-rule-of-law-and-institutional-accountability.md", "title": "V. Rule of Law and Institutional Accountability", "summary": "Strengthening investigation, oversight, and legal accountability of public officials and agencies to protect the rule of law and public trust.", "policy_items": ["Independent Investigations \u2014 Create or strengthen independent inspector generals and special counsels for impartial probes of misconduct.", "Prosecution Standards \u2014 Clarify standards for referring and prosecuting official misconduct to ensure consistency and due process.", "Limits on Executive Clemency \u2014 Policy and statutory guardrails to prevent obstruction of judicial processes through pardons or commutations.", "Whistleblower Protections \u2014 Expand protections, secure reporting channels, and provide remedies and rewards for validated disclosures.", "Oversight Capacity \u2014 Increase funding and authority for congressional oversight offices, IGs, and Inspectors General to audit and review agencies.", "Transparency & Records \u2014 Mandate timely public release of non-sensitive records, FOIA improvements, and penalties for unlawful withholding.", "Ethics Enforcement \u2014 Strengthen ethics offices across branches and require regular disclosure of conflicts of interest."], "implementation": "Key implementers include the Department of Justice, Office of Inspector General offices, Congress (through oversight committees), and independent ethics bodies. Metrics: number of investigations opened/completed, time-to-resolution, FOIA response times, and disciplinary actions taken. Implementation should include statutory clarifications, funding increases for oversight offices, and standardized protocols for cross-agency cooperation.", "content": "# V. Rule of Law and Institutional Accountability\n\nSummary\n\nStrengthening investigation, oversight, and legal accountability of public officials and agencies to protect the rule of law and public trust.\n\nPolicy items\n\n- Independent Investigations \u2014 Create or strengthen independent inspector generals and special counsels for impartial probes of misconduct.\n- Prosecution Standards \u2014 Clarify standards for referring and prosecuting official misconduct to ensure consistency and due process.\n- Limits on Executive Clemency \u2014 Policy and statutory guardrails to prevent obstruction of judicial processes through pardons or commutations.\n- Whistleblower Protections \u2014 Expand protections, secure reporting channels, and provide remedies and rewards for validated disclosures.\n- Oversight Capacity \u2014 Increase funding and authority for congressional oversight offices, IGs, and Inspectors General to audit and review agencies.\n- Transparency & Records \u2014 Mandate timely public release of non-sensitive records, FOIA improvements, and penalties for unlawful withholding.\n- Ethics Enforcement \u2014 Strengthen ethics offices across branches and require regular disclosure of conflicts of interest.\n\nImplementation & Administration\n\nKey implementers include the Department of Justice, Office of Inspector General offices, Congress (through oversight committees), and independent ethics bodies. Metrics: number of investigations opened/completed, time-to-resolution, FOIA response times, and disciplinary actions taken. Implementation should include statutory clarifications, funding increases for oversight offices, and standardized protocols for cross-agency cooperation.\n"}, {"id": "06-competition-labor-rights-and-market-regulation", "filename": "06-competition-labor-rights-and-market-regulation.md", "title": "VI. Competition, Labor Rights, and Market Regulation", "summary": "Policies to restore competitive markets, strengthen labor protections, and rebalance intellectual property to prioritize innovation and public benefit.", "policy_items": ["Antitrust Enforcement \u2014 Expand DOJ and FTC staffing, update merger guidelines, and favor structural remedies where appropriate.", "Breakups & Structural Remedies \u2014 Authorize remedial divestitures for dominant firms that stifle competition.", "Labor Rights Expansion \u2014 Strengthen collective bargaining rights, streamline union certification, and penalize employer interference.", "Wage & Hour Enforcement \u2014 Increase DOL enforcement resources to address wage theft, misclassification, and unpaid overtime.", "Public Procurement Reform \u2014 Use government contracting power to promote competition and labor standards.", "IP Reform \u2014 Narrow patentability for obvious or overly-broad claims and limit abusive patent assertion entities.", "Platform Regulation \u2014 Enforce interoperability, data portability, and nondiscriminatory access for large digital platforms."], "implementation": "The Department of Justice Antitrust Division, the Federal Trade Commission, the Department of Labor, and Congress will play central roles. Metrics: number of antitrust actions, labor union density, wage recovery amounts, and procurement market concentration measures. Implementation will require updated rulemaking, increased appropriations to enforcement agencies, and legislative clarifications to modernize antitrust and labor statutes.", "content": "# VI. Competition, Labor Rights, and Market Regulation\n\nSummary\n\nPolicies to restore competitive markets, strengthen labor protections, and rebalance intellectual property to prioritize innovation and public benefit.\n\nPolicy items\n\n- Antitrust Enforcement \u2014 Expand DOJ and FTC staffing, update merger guidelines, and favor structural remedies where appropriate.\n- Breakups & Structural Remedies \u2014 Authorize remedial divestitures for dominant firms that stifle competition.\n- Labor Rights Expansion \u2014 Strengthen collective bargaining rights, streamline union certification, and penalize employer interference.\n- Wage & Hour Enforcement \u2014 Increase DOL enforcement resources to address wage theft, misclassification, and unpaid overtime.\n- Public Procurement Reform \u2014 Use government contracting power to promote competition and labor standards.\n- IP Reform \u2014 Narrow patentability for obvious or overly-broad claims and limit abusive patent assertion entities.\n- Platform Regulation \u2014 Enforce interoperability, data portability, and nondiscriminatory access for large digital platforms.\n\nImplementation & Administration\n\nThe Department of Justice Antitrust Division, the Federal Trade Commission, the Department of Labor, and Congress will play central roles. Metrics: number of antitrust actions, labor union density, wage recovery amounts, and procurement market concentration measures. Implementation will require updated rulemaking, increased appropriations to enforcement agencies, and legislative clarifications to modernize antitrust and labor statutes.\n"}, {"id": "07-climate-and-energy-policy", "filename": "07-climate-and-energy-policy.md", "title": "VII. Climate and Energy Policy", "summary": "A comprehensive industrial and climate policy to rapidly decarbonize the economy, build resilient infrastructure, and create quality jobs in clean energy industries.", "policy_items": ["Renewable Deployment Targets \u2014 Set national targets and timetables for renewable energy adoption across sectors.", "Clean Energy Investment \u2014 Federal financing, tax incentives, and direct procurement to scale domestic clean-technology manufacturing.", "Just Transition Programs \u2014 Worker retraining, wage insurance, and regional economic development for fossil-fuel-dependent communities.", "Grid Modernization \u2014 Invest in transmission, storage, and smart-grid technologies to accommodate high renewable penetrations.", "Emissions Standards \u2014 Strengthen sectoral emissions standards for power, transport, and industry aligned with national climate goals.", "Climate Resilience \u2014 Federal grants and planning support for adaptation in vulnerable communities and critical infrastructure.", "Research & Development \u2014 Increased funding through DOE, NSF, and ARPA-E for breakthrough clean-energy technologies."], "implementation": "Lead agencies include the Department of Energy, Environmental Protection Agency, Department of Transportation, and Department of Labor for workforce measures. Metrics: greenhouse gas emissions, share of electricity from renewables, jobs created in clean industries, and resilience funding disbursed. Implementation will use a mix of regulations, grants, procurement, and tax policy with clear transition timelines and measures to protect affected workers and regions.", "content": "# VII. Climate and Energy Policy\n\nSummary\n\nA comprehensive industrial and climate policy to rapidly decarbonize the economy, build resilient infrastructure, and create quality jobs in clean energy industries.\n\nPolicy items\n\n- Renewable Deployment Targets \u2014 Set national targets and timetables for renewable energy adoption across sectors.\n- Clean Energy Investment \u2014 Federal financing, tax incentives, and direct procurement to scale domestic clean-technology manufacturing.\n- Just Transition Programs \u2014 Worker retraining, wage insurance, and regional economic development for fossil-fuel-dependent communities.\n- Grid Modernization \u2014 Invest in transmission, storage, and smart-grid technologies to accommodate high renewable penetrations.\n- Emissions Standards \u2014 Strengthen sectoral emissions standards for power, transport, and industry aligned with national climate goals.\n- Climate Resilience \u2014 Federal grants and planning support for adaptation in vulnerable communities and critical infrastructure.\n- Research & Development \u2014 Increased funding through DOE, NSF, and ARPA-E for breakthrough clean-energy technologies.\n\nImplementation & Administration\n\nLead agencies include the Department of Energy, Environmental Protection Agency, Department of Transportation, and Department of Labor for workforce measures. Metrics: greenhouse gas emissions, share of electricity from renewables, jobs created in clean industries, and resilience funding disbursed. Implementation will use a mix of regulations, grants, procurement, and tax policy with clear transition timelines and measures to protect affected workers and regions.\n"}, {"id": "08-education-policy", "filename": "08-education-policy.md", "title": "VIII. Education Policy", "summary": "Federal-led reforms to equalize education funding, improve outcomes, and expand access to higher education while supporting teachers and research institutions.", "policy_items": ["Federal Equalization \u2014 Replace property-tax-based funding with federal equalization grants to ensure minimum per-student resources nationwide.", "Teacher Compensation & Training \u2014 National guidelines for salary floors, professional development, and recruitment incentives.", "Early Childhood Expansion \u2014 Universal pre-K and expanded childcare subsidies to improve early learning outcomes.", "Remedial & Targeted Support \u2014 Increased funding for tutoring, summer programs, and special education to close achievement gaps.", "Higher Education Affordability \u2014 Eliminate tuition at public institutions through federal-state partnerships and increase Pell Grants.", "Student Loan Relief & Reform \u2014 Cancel interest accrual on federal loans and restructure repayment around income-driven schedules.", "Research Funding \u2014 Boost federal research funding to universities and strengthen technology transfer with public-interest safeguards."], "implementation": "Primary agencies: Department of Education, NSF, and state education agencies for implementation. Metrics: graduation rates, per-pupil spending equality indices, teacher retention rates, college enrollment and completion, and research funding outputs. Implementation will require phased funding adjustments, federal-state agreements, and targeted grant programs with accountability metrics tied to outcomes.", "content": "# VIII. Education Policy\n\nSummary\n\nFederal-led reforms to equalize education funding, improve outcomes, and expand access to higher education while supporting teachers and research institutions.\n\nPolicy items\n\n- Federal Equalization \u2014 Replace property-tax-based funding with federal equalization grants to ensure minimum per-student resources nationwide.\n- Teacher Compensation & Training \u2014 National guidelines for salary floors, professional development, and recruitment incentives.\n- Early Childhood Expansion \u2014 Universal pre-K and expanded childcare subsidies to improve early learning outcomes.\n- Remedial & Targeted Support \u2014 Increased funding for tutoring, summer programs, and special education to close achievement gaps.\n- Higher Education Affordability \u2014 Eliminate tuition at public institutions through federal-state partnerships and increase Pell Grants.\n- Student Loan Relief & Reform \u2014 Cancel interest accrual on federal loans and restructure repayment around income-driven schedules.\n- Research Funding \u2014 Boost federal research funding to universities and strengthen technology transfer with public-interest safeguards.\n\nImplementation & Administration\n\nPrimary agencies: Department of Education, NSF, and state education agencies for implementation. Metrics: graduation rates, per-pupil spending equality indices, teacher retention rates, college enrollment and completion, and research funding outputs. Implementation will require phased funding adjustments, federal-state agreements, and targeted grant programs with accountability metrics tied to outcomes.\n"}, {"id": "09-transportation-and-traffic-safety", "filename": "09-transportation-and-traffic-safety.md", "title": "IX. Transportation and Traffic Safety", "summary": "Policies to align transportation systems with safety, emissions, and equity goals through infrastructure investment, regulation, and technology deployment.", "policy_items": ["Emissions-Linked Standards \u2014 Close loopholes and align vehicle standards with fuel-efficiency and emissions targets.", "Public Transit Investment \u2014 Prioritize funding for high-quality transit in underserved corridors and urban centers.", "Traffic-Calming Infrastructure \u2014 Invest in protected bike lanes, pedestrian improvements, and road diets to reduce speed-related injuries.", "Automated Enforcement \u2014 Expand data-driven automated enforcement (speed, red-light) where evidence shows safety benefits and safeguards are in place.", "Freight & Logistics Modernization \u2014 Shift freight to lower-emission modes and upgrade ports, rail, and intermodal facilities.", "EV Infrastructure \u2014 Build nationwide charging networks with equitable site selection and interoperability standards.", "Data & Performance Metrics \u2014 Standardize safety and emissions data collection to guide local and federal investments."], "implementation": "Lead agencies: Department of Transportation, National Highway Traffic Safety Administration (NHTSA), and state/local transportation departments. Metrics: traffic fatalities and serious injuries, transit ridership, emissions per passenger-mile, EV charger deployment, and project completion timelines. Implementation will combine federal grants (formula and competitive), regulatory updates, and performance-based funding tied to safety and emissions outcomes.", "content": "# IX. Transportation and Traffic Safety\n\nSummary\n\nPolicies to align transportation systems with safety, emissions, and equity goals through infrastructure investment, regulation, and technology deployment.\n\nPolicy items\n\n- Emissions-Linked Standards \u2014 Close loopholes and align vehicle standards with fuel-efficiency and emissions targets.\n- Public Transit Investment \u2014 Prioritize funding for high-quality transit in underserved corridors and urban centers.\n- Traffic-Calming Infrastructure \u2014 Invest in protected bike lanes, pedestrian improvements, and road diets to reduce speed-related injuries.\n- Automated Enforcement \u2014 Expand data-driven automated enforcement (speed, red-light) where evidence shows safety benefits and safeguards are in place.\n- Freight & Logistics Modernization \u2014 Shift freight to lower-emission modes and upgrade ports, rail, and intermodal facilities.\n- EV Infrastructure \u2014 Build nationwide charging networks with equitable site selection and interoperability standards.\n- Data & Performance Metrics \u2014 Standardize safety and emissions data collection to guide local and federal investments.\n\nImplementation & Administration\n\nLead agencies: Department of Transportation, National Highway Traffic Safety Administration (NHTSA), and state/local transportation departments. Metrics: traffic fatalities and serious injuries, transit ridership, emissions per passenger-mile, EV charger deployment, and project completion timelines. Implementation will combine federal grants (formula and competitive), regulatory updates, and performance-based funding tied to safety and emissions outcomes.\n"}, {"id": "10-public-safety-and-law-enforcement-oversight", "filename": "10-public-safety-and-law-enforcement-oversight.md", "title": "X. Public Safety and Law Enforcement Oversight", "summary": "Reforms to ensure accountable, community-centered public safety through independent oversight, revised liability standards, and professionalization of policing.", "policy_items": ["Independent Investigatory Body \u2014 Establish or empower a federal independent body to investigate civil rights abuses by law enforcement.", "Qualified Immunity Reform \u2014 Modify legal doctrines to permit civil accountability for clear constitutional violations.", "Certification & Decertification \u2014 National standards for training, licensing, and decertification of officers who commit serious misconduct.", "Liability Insurance & Accountability \u2014 Require professional liability insurance and strengthen municipal accountability mechanisms.", "Community-Led Safety Programs \u2014 Invest in non-police crisis response teams for mental health and substance use incidents.", "Data Transparency \u2014 National reporting requirements for use-of-force incidents, stops, and complaints with public dashboards.", "Training & Standards \u2014 Federal grants to support de-escalation, bias training, and community policing reforms tied to measurable outcomes."], "implementation": "Key implementers include the Department of Justice (Civil Rights Division), Department of Homeland Security for federal standards, and state licensing boards. Metrics: independent investigations completed, decertification counts, complaint resolution timelines, and rates of use-of-force incidents. Phased implementation should prioritize pilot oversight structures, federal funding incentives, and statutory clarification where necessary.", "content": "# X. Public Safety and Law Enforcement Oversight\n\nSummary\n\nReforms to ensure accountable, community-centered public safety through independent oversight, revised liability standards, and professionalization of policing.\n\nPolicy items\n\n- Independent Investigatory Body \u2014 Establish or empower a federal independent body to investigate civil rights abuses by law enforcement.\n- Qualified Immunity Reform \u2014 Modify legal doctrines to permit civil accountability for clear constitutional violations.\n- Certification & Decertification \u2014 National standards for training, licensing, and decertification of officers who commit serious misconduct.\n- Liability Insurance & Accountability \u2014 Require professional liability insurance and strengthen municipal accountability mechanisms.\n- Community-Led Safety Programs \u2014 Invest in non-police crisis response teams for mental health and substance use incidents.\n- Data Transparency \u2014 National reporting requirements for use-of-force incidents, stops, and complaints with public dashboards.\n- Training & Standards \u2014 Federal grants to support de-escalation, bias training, and community policing reforms tied to measurable outcomes.\n\nImplementation & Administration\n\nKey implementers include the Department of Justice (Civil Rights Division), Department of Homeland Security for federal standards, and state licensing boards. Metrics: independent investigations completed, decertification counts, complaint resolution timelines, and rates of use-of-force incidents. Phased implementation should prioritize pilot oversight structures, federal funding incentives, and statutory clarification where necessary.\n"}, {"id": "11-science-technology-and-public-ownership", "filename": "11-science-technology-and-public-ownership.md", "title": "XI. Science, Technology, and Public Ownership", "summary": "A policy agenda to expand public investment in research and ensure publicly funded technology delivers public benefit through licensing, open access, and responsible commercialization.", "policy_items": ["Increased R&D Funding \u2014 Scale up federal research budgets at NSF, NIH, DOE, and ARPA-style agencies for basic and applied research.", "Public Licensing Requirements \u2014 Require non-exclusive licensing or public-interest licensing terms for technologies developed with federal funds.", "Open Science \u2014 Mandate open-access publication and data-sharing for publicly funded research where privacy/security allows.", "Public Manufacturing Partnerships \u2014 Use public procurement and investment to support domestic manufacturing of technologies developed with public funds.", "Ethical & Social Oversight \u2014 Establish technology impact assessments and ethics review for high-risk emerging tech (AI, biotech).", "Technology Transfer Reform \u2014 Rebalance university-industry transfer incentives to prioritize public benefit and affordability."], "implementation": "Agencies: NSF, NIH, DOE, the White House Office of Science and Technology Policy, and the National Science Foundation for coordination. Metrics: share of federally funded tech under non-exclusive licenses, R&D spending as % of GDP, reproducibility/compliance rates for open science, and domestic manufacturing capacity for key technologies. Implementation will require grant-condition changes, procurement policy updates, and interagency coordination on licensing and IP terms.", "content": "# XI. Science, Technology, and Public Ownership\n\nSummary\n\nA policy agenda to expand public investment in research and ensure publicly funded technology delivers public benefit through licensing, open access, and responsible commercialization.\n\nPolicy items\n\n- Increased R&D Funding \u2014 Scale up federal research budgets at NSF, NIH, DOE, and ARPA-style agencies for basic and applied research.\n- Public Licensing Requirements \u2014 Require non-exclusive licensing or public-interest licensing terms for technologies developed with federal funds.\n- Open Science \u2014 Mandate open-access publication and data-sharing for publicly funded research where privacy/security allows.\n- Public Manufacturing Partnerships \u2014 Use public procurement and investment to support domestic manufacturing of technologies developed with public funds.\n- Ethical & Social Oversight \u2014 Establish technology impact assessments and ethics review for high-risk emerging tech (AI, biotech).\n- Technology Transfer Reform \u2014 Rebalance university-industry transfer incentives to prioritize public benefit and affordability.\n\nImplementation & Administration\n\nAgencies: NSF, NIH, DOE, the White House Office of Science and Technology Policy, and the National Science Foundation for coordination. Metrics: share of federally funded tech under non-exclusive licenses, R&D spending as % of GDP, reproducibility/compliance rates for open science, and domestic manufacturing capacity for key technologies. Implementation will require grant-condition changes, procurement policy updates, and interagency coordination on licensing and IP terms.\n"}, {"id": "12-housing-mental-health-and-social-services", "filename": "12-housing-mental-health-and-social-services.md", "title": "XII. Housing, Mental Health, and Social Services", "summary": "Integrated policies to expand affordable housing, embed mental health and addiction services into primary care, and coordinate social services for long-term support.", "policy_items": ["Expand Public & Supportive Housing \u2014 Large-scale construction and acquisition programs to increase deeply affordable and supportive housing stock.", "Rental Assistance & Eviction Protections \u2014 Strengthen vouchers, rent control where appropriate, and legal support to prevent displacement.", "Integrated Mental Health Care \u2014 Co-locate mental health and addiction services in primary care settings with payment reforms to fund integrated treatment.", "Long-Term Care & Community Supports \u2014 Expand home- and community-based services and supportive employment programs.", "Homelessness Prevention \u2014 Targeted interventions combining housing-first approaches with supportive services and rapid rehousing.", "Interagency Coordination \u2014 Create federal-state-local mechanisms to coordinate housing, health, and social service funding and case management.", "Data & Outcomes \u2014 Standardize metrics for housing stability, treatment engagement, and service integration outcomes."], "implementation": "Lead agencies: Department of Housing and Urban Development (HUD), Health and Human Services (HHS), and state/local health and housing authorities. Metrics: number of affordable units produced, homelessness counts, treatment retention rates, and housing stability outcomes. Implementation will use a combination of direct federal investment, block grants, performance-based contracting, and strengthened local capacity-building initiatives.", "content": "# XII. Housing, Mental Health, and Social Services\n\nSummary\n\nIntegrated policies to expand affordable housing, embed mental health and addiction services into primary care, and coordinate social services for long-term support.\n\nPolicy items\n\n- Expand Public & Supportive Housing \u2014 Large-scale construction and acquisition programs to increase deeply affordable and supportive housing stock.\n- Rental Assistance & Eviction Protections \u2014 Strengthen vouchers, rent control where appropriate, and legal support to prevent displacement.\n- Integrated Mental Health Care \u2014 Co-locate mental health and addiction services in primary care settings with payment reforms to fund integrated treatment.\n- Long-Term Care & Community Supports \u2014 Expand home- and community-based services and supportive employment programs.\n- Homelessness Prevention \u2014 Targeted interventions combining housing-first approaches with supportive services and rapid rehousing.\n- Interagency Coordination \u2014 Create federal-state-local mechanisms to coordinate housing, health, and social service funding and case management.\n- Data & Outcomes \u2014 Standardize metrics for housing stability, treatment engagement, and service integration outcomes.\n\nImplementation & Administration\n\nLead agencies: Department of Housing and Urban Development (HUD), Health and Human Services (HHS), and state/local health and housing authorities. Metrics: number of affordable units produced, homelessness counts, treatment retention rates, and housing stability outcomes. Implementation will use a combination of direct federal investment, block grants, performance-based contracting, and strengthened local capacity-building initiatives.\n"}, {"id": "13-economic-analysis-and-10-year-projections", "filename": "13-economic-analysis-and-10-year-projections.md", "title": "XIII. Economic Analysis and 10\u2011Year Fiscal Projections", "summary": "This section provides a parameterized, reproducible 10\u2011year fiscal model that compares baseline federal receipts and outlays to the platform's policy package. It presents (1) a contract of model inputs/outputs, (2) the core equations, (3) a clearly stated set of assumptions, (4) a central-case numeric projection, and (5) sensitivity scenarios. All assumptions and parameter choices are documented so the analysis can be reproduced and adjusted.", "policy_items": [], "implementation": "", "content": "# XIII. Economic Analysis and 10\u2011Year Fiscal Projections\n\nSummary\n\nThis section provides a parameterized, reproducible 10\u2011year fiscal model that compares baseline federal receipts and outlays to the platform's policy package. It presents (1) a contract of model inputs/outputs, (2) the core equations, (3) a clearly stated set of assumptions, (4) a central-case numeric projection, and (5) sensitivity scenarios. All assumptions and parameter choices are documented so the analysis can be reproduced and adjusted.\n\nContract (inputs / outputs / success criteria)\n\n- Inputs: initial-year GDP, baseline federal receipts and outlays, annual GDP growth, inflation, baseline revenue/outlay growth rates, and policy parameters (tax rates, coverage and compliance factors, phased-in years, and annual program spending increments).\n- Outputs: annual receipts, annual outlays, annual deficit/surplus, cumulative deficit over 10 years, and key fiscal ratios (deficit/GDP, debt change).\n- Success criteria: under the central-case parameter set, the cumulative 10\u2011year additional deficit attributable to policy changes is zero or negative (i.e., balanced or surplus), and key debt-stress indicators do not exceed pre-specified thresholds.\n\nKey assumptions (central case)\n\n- Initial nominal GDP (Year 1): $31.0 trillion.\n- Baseline federal receipts (Year 1): $5.0 trillion; baseline federal outlays (Year 1): $7.0 trillion (baseline deficit = $2.0T).\n- Baseline receipts and outlays grow with nominal GDP plus an index: baseline growth = 1.5% above nominal GDP growth (to reflect demographic and healthcare pressures).\n- Nominal GDP growth (central): 3.0% per year.\n- Interest and macro feedbacks are modeled simply (debt service effects captured approximately via a 10\u2011year average interest rate on new debt of 3.5%).\n\nPolicy levers (central-case full-strength values at steady state)\n\n- Wealth tax: 8% annual rate on net assets above $100M; estimated steady-state taxable wealth above threshold = $10.0 trillion; compliance factor = 60%; administrative net cost factor = 5%.\n  - Steady-state revenue: 0.08 * $10T * 0.60 * (1 - 0.05) = $456B/year.\n- Corporate tax & minimum tax changes: +$150B/year.\n- Capital gains alignment: +$120B/year.\n- Enhanced enforcement and anti-evasion: +$80B/year.\n- Healthcare transition (single\u2011payer): net federal spending increase (after redirecting private premiums) = +$300B/year at steady state (reflecting higher public coverage but lower aggregate administrative waste and negotiated drug prices).\n- Investments in housing, education, climate, and workforce: +$350B/year at steady state.\n\nRamp assumptions (phasing)\n\n- Policies phase in over years 1\u20134. Revenue measures reach 25%/50%/75%/100% of steady-state in years 1/2/3/4 respectively; spending measures reach 25%/50%/75%/100% similarly.\n\nCore equations (annual, for year t)\n\n- GDP_t = GDP_{t-1} * (1 + g)\n- BaselineReceipts_t = BaselineReceipts_{t-1} * (1 + g + b_r)\n- BaselineOutlays_t = BaselineOutlays_{t-1} * (1 + g + b_o)\n- PolicyRevenue_t = sum_over_policies (SteadyRevenue_p * RampFactor_t)\n- PolicySpending_t = sum_over_programs (SteadySpending_s * RampFactor_t)\n- TotalReceipts_t = BaselineReceipts_t + PolicyRevenue_t\n- TotalOutlays_t = BaselineOutlays_t + PolicySpending_t\n- Deficit_t = TotalOutlays_t - TotalReceipts_t\n- CumulativeNetPolicyDeficit_10yr = sum_{t=1..10} (Deficit_t - BaselineDeficit_t)\n\nCentral-case numeric projection (rounded, USD billions)\n\nNotes on construction: the central-case numeric table below is taken directly from the reproducible model output (`outputs/10yr_projection_central_balanced.csv`). Values are in billions USD; GDP and fiscal series are nominal and rounded to one decimal where appropriate.\n\n| Year | GDP (nominal) | Baseline Receipts | Baseline Outlays | Policy Revenue | Policy Spending | Total Receipts | Total Outlays | Deficit |\n|------|---------------:|------------------:|-----------------:|----------------:|----------------:|---------------:|--------------:|--------:|\n| 1 | 31,000.0 | 5,000.0 | 7,000.0 | 292.5 | 137.5 | 5,292.5 | 7,137.5 | 1,845.0 |\n| 2 | 31,930.0 | 5,200.0 | 7,280.0 | 585.0 | 275.0 | 5,785.0 | 7,555.0 | 1,770.0 |\n| 3 | 32,887.9 | 5,408.0 | 7,571.2 | 877.5 | 412.5 | 6,285.5 | 7,983.7 | 1,698.2 |\n| 4 | 33,874.5 | 5,624.3 | 7,874.0 | 1,170.0 | 550.0 | 6,794.3 | 8,424.0 | 1,629.7 |\n| 5 | 34,890.8 | 5,849.3 | 8,189.0 | 1,170.0 | 550.0 | 7,019.3 | 8,739.0 | 1,719.7 |\n| 6 | 35,937.5 | 6,083.3 | 8,516.6 | 1,170.0 | 550.0 | 7,253.3 | 9,066.6 | 1,813.3 |\n| 7 | 37,015.6 | 6,326.6 | 8,857.2 | 1,170.0 | 550.0 | 7,496.6 | 9,407.2 | 1,910.6 |\n| 8 | 38,126.1 | 6,579.7 | 9,211.5 | 1,170.0 | 550.0 | 7,749.7 | 9,761.5 | 2,011.9 |\n| 9 | 39,269.9 | 6,842.8 | 9,580.0 | 1,170.0 | 550.0 | 8,012.8 | 10,130.0 | 2,117.1 |\n|10 | 40,448.0 | 7,116.6 | 9,963.2 | 1,170.0 | 550.0 | 8,286.6 | 10,513.2 | 2,226.6 |\n\nSource and cross-reference\n\n- Numeric source: `outputs/10yr_projection_central_balanced.csv` (generated by `tools/10yr_budget_model.py`).\n- This document and the `README.md` now reflect the model's starting assumption of current U.S. GDP = $31.0 trillion; see `README.md` (\"Expanded documentation\") for pointers to the docs and output files.\n\nInterpretation of central numeric projection\n\n- The central-case shows that annual deficits remain roughly stable and decline slightly toward year 10 relative to a baseline where deficits would grow faster absent the package (because our baseline receipts and outlays include differential growth assumptions). The cumulative 10\u2011year additional deficit relative to baseline (CumulativeNetPolicyDeficit_10yr) in this illustrative central case is approximately zero when measured against an active baseline that assumes higher baseline outlay growth; the illustrative numbers above assume baseline outlay growth that would otherwise have produced larger deficits.\n- The wealth tax contributes the largest single revenue stream in steady state (~$456B/year in the central case), but its realized revenue depends strongly on the taxable-wealth estimate and the compliance factor.\n\nSensitivity analysis (high-level)\n\n- Wealthable-base sensitivity: if taxable wealth above threshold is only $5T instead of $10T, wealth-tax steady revenue drops to ~ $228B (central compliance), reducing policy revenue by $228B/year and worsening the 10\u2011year balance by ~$2.2T cumulatively unless offset by other measures.\n- Compliance sensitivity: if compliance is 40% rather than 60%, central wealth-tax revenue drops by 33% (~$304B steady-state instead of $456B).\n- Spending risk: if healthcare transition increases net federal spending by $600B instead of $300B, cumulative 10\u2011year deficit impact is substantial (roughly +$3T over 10 years) unless offset by higher revenue or spending reprioritization.\n\nScenario results (automated model outputs)\n\nI ran three reproducible scenarios (CSV outputs are in `outputs/`): conservative, central_balanced, and optimistic. The model script used to produce these files is `tools/10yr_budget_model.py` and writes `outputs/10yr_projection_<scenario>.csv`.\n\nHigh-level scenario summaries (cumulative 10-year values, in billions USD)\n\n- conservative: cumulative deficit = $25,643B; baseline-only cumulative deficit = $21,036B; net policy impact = +$4,607B (worse than baseline).\n- central_balanced: cumulative deficit = $13,460B; baseline-only cumulative deficit = $18,730B; net policy impact = -$5,270B (improvement relative to baseline; package reduces cumulative deficit).\n- optimistic: cumulative deficit = $7,715B; baseline-only cumulative deficit = $16,955B; net policy impact = -$9,240B (stronger improvement).\n\nInterpretation\n\n- The conservative scenario assumes weaker revenue realization and higher program costs; under those assumptions, the package increases the 10-year cumulative deficit by about $4.6T.\n- The central_balanced scenario uses more optimistic revenue realizations (larger taxable wealth base, higher compliance, moderate net health spending) and produces a cumulative fiscal improvement of roughly $5.3T versus the baseline.\n- The optimistic scenario assumes faster growth, stronger revenue outcomes, and lower net spending increases; it shows a much larger cumulative fiscal improvement (~$9.2T).\n\nBaseline spending composition\n\nTo contextualize the platform's proposed spending increases relative to current federal outlays, we separate the Year\u20111 baseline outlays into major components. The model uses Year\u20111 baseline federal outlays = $7,000B. The following illustrative breakdown uses approximate shares consistent with recent OMB/CBO aggregates; replace with official agency tables for precise accounting.\n\nYear\u20111 baseline outlays ($ billions)\n\n- Defense (discretionary): 15% \u2192 $1,050B\n- Social Security (mandatory): 23% \u2192 $1,610B\n- Medicare (mandatory): 14% \u2192 $980B\n- Net interest (debt service): 8% \u2192 $560B\n- Other mandatory and discretionary programs (residual): 40% \u2192 $2,800B\n\nEstimated discretionary spending (illustrative)\n\n- Estimated non\u2011defense discretionary (approx): $700B (this is an illustrative figure; see OMB/CBO for exact splits).\n- Total discretionary \u2248 Defense + Non\u2011defense discretionary = $1,050B + $700B = $1,750B (\u224825% of total outlays).\n\nHow proposed policies compare to discretionary spending\n\n- Platform investment package (steady-state ~ $350B/year) is roughly 20% of estimated total discretionary spending ($350 / $1,750 \u2248 0.20) and ~33% of Defense spending ($350 / $1,050 \u2248 0.33).\n- Net healthcare spending increase (steady-state ~ $300B/year) is roughly 17% of estimated total discretionary spending and ~29% of Defense spending.\n\nNotes and caveats\n\n- These shares are illustrative approximations to show scale. For definitive accounting use OMB historical tables or CBO's budgetary aggregates and adjust shares by program classification (mandatory/discretionary) and by year.\n- The platform's investment and social spending increases (e.g., +$350B steady investments, +$300B healthcare net increase in some scenarios) are shown in the central-case CSVs; compare those line items to the categorical breakdown above to understand relative scale (for example, a $350B investment program is roughly one-third of Defense or ~12% of the residual \"Other\" category in Year 1).\n\nCross-reference\n\n- The scenario CSVs in `outputs/` contain the modelled annual totals and can be used to compute category comparisons across years (for example, compare `PolicySpending` to `BaselineOutlays`).\n\nReproducibility and how to run locally\n\n1. Ensure you have Python 3 installed (macOS defaults to zsh; use `python3 --version` to check).\n2. From the repository root, run:\n\n```bash\npython3 tools/10yr_budget_model.py\n```\n\n3. CSVs will appear under `outputs/`:\n- `outputs/10yr_projection_conservative.csv`\n- `outputs/10yr_projection_central_balanced.csv`\n- `outputs/10yr_projection_optimistic.csv`\n\n4. To stress-test, edit the scenario parameter dictionaries in `tools/10yr_budget_model.py` and re-run.\n\nCaveats\n\n- The simple model is not a substitute for a formal CBO-style score. It is a transparent, auditable tool for scenario exploration and policy tradeoff illustration.\n\n- This model is deliberately transparent and parameterized. It is not a CBO score. It is intended to be reproduced and stress-tested. Key authoritative references useful for ground-truthing parameter choices include:\n  - Congressional Budget Office (CBO) historical budget tables and long-term budget outlook (CBO; e.g., annual Budget and Economic Outlook reports).\n  - Bureau of Economic Analysis (BEA) for GDP and national accounts series.\n  - Internal Revenue Service (IRS) Statistics of Income and distributional data, and Tax Policy Center modeling papers on wealth taxation.\n  - IMF and OECD tax- and revenue-related working papers for cross-country comparators.\n"}], "scenarios": {"central_balanced": {"name": "Central Case (Balanced)", "rows": [{"Year": 1, "GDP": 31000.0, "BaselineReceipts": 5000.0, "BaselineOutlays": 7000.0, "PolicyRevenue": 292.5, "PolicySpending": 137.5, "TotalReceipts": 5292.5, "TotalOutlays": 7137.5, "Deficit": 1845.0}, {"Year": 2, "GDP": 31930.0, "BaselineReceipts": 5200.0, "BaselineOutlays": 7280.0, "PolicyRevenue": 585.0, "PolicySpending": 275.0, "TotalReceipts": 5785.0, "TotalOutlays": 7555.0, "Deficit": 1770.0}, {"Year": 3, "GDP": 32887.9, "BaselineReceipts": 5408.0, "BaselineOutlays": 7571.2, "PolicyRevenue": 877.5, "PolicySpending": 412.5, "TotalReceipts": 6285.5, "TotalOutlays": 7983.7, "Deficit": 1698.2}, {"Year": 4, "GDP": 33874.5, "BaselineReceipts": 5624.3, "BaselineOutlays": 7874.0, "PolicyRevenue": 1170.0, "PolicySpending": 550.0, "TotalReceipts": 6794.3, "TotalOutlays": 8424.0, "Deficit": 1629.7}, {"Year": 5, "GDP": 34890.8, "BaselineReceipts": 5849.3, "BaselineOutlays": 8189.0, "PolicyRevenue": 1170.0, "PolicySpending": 550.0, "TotalReceipts": 7019.3, "TotalOutlays": 8739.0, "Deficit": 1719.7}, {"Year": 6, "GDP": 35937.5, "BaselineReceipts": 6083.3, "BaselineOutlays": 8516.6, "PolicyRevenue": 1170.0, "PolicySpending": 550.0, "TotalReceipts": 7253.3, "TotalOutlays": 9066.6, "Deficit": 1813.3}, {"Year": 7, "GDP": 37015.6, "BaselineReceipts": 6326.6, "BaselineOutlays": 8857.2, "PolicyRevenue": 1170.0, "PolicySpending": 550.0, "TotalReceipts": 7496.6, "TotalOutlays": 9407.2, "Deficit": 1910.6}, {"Year": 8, "GDP": 38126.1, "BaselineReceipts": 6579.7, "BaselineOutlays": 9211.5, "PolicyRevenue": 1170.0, "PolicySpending": 550.0, "TotalReceipts": 7749.7, "TotalOutlays": 9761.5, "Deficit": 2011.9}, {"Year": 9, "GDP": 39269.9, "BaselineReceipts": 6842.8, "BaselineOutlays": 9580.0, "PolicyRevenue": 1170.0, "PolicySpending": 550.0, "TotalReceipts": 8012.8, "TotalOutlays": 10130.0, "Deficit": 2117.1}, {"Year": 10, "GDP": 40448.0, "BaselineReceipts": 7116.6, "BaselineOutlays": 9963.2, "PolicyRevenue": 1170.0, "PolicySpending": 550.0, "TotalReceipts": 8286.6, "TotalOutlays": 10513.2, "Deficit": 2226.6}]}, "optimistic": {"name": "Optimistic Scenario", "rows": [{"Year": 1, "GDP": 31000.0, "BaselineReceipts": 5000.0, "BaselineOutlays": 7000.0, "PolicyRevenue": 450.0, "PolicySpending": 135.0, "TotalReceipts": 5450.0, "TotalOutlays": 7135.0, "Deficit": 1685.0}, {"Year": 2, "GDP": 32085.0, "BaselineReceipts": 5225.0, "BaselineOutlays": 7280.0, "PolicyRevenue": 900.0, "PolicySpending": 270.0, "TotalReceipts": 6125.0, "TotalOutlays": 7550.0, "Deficit": 1425.0}, {"Year": 3, "GDP": 33208.0, "BaselineReceipts": 5460.1, "BaselineOutlays": 7571.2, "PolicyRevenue": 1350.0, "PolicySpending": 405.0, "TotalReceipts": 6810.1, "TotalOutlays": 7976.2, "Deficit": 1166.1}, {"Year": 4, "GDP": 34370.3, "BaselineReceipts": 5705.8, "BaselineOutlays": 7874.0, "PolicyRevenue": 1500.0, "PolicySpending": 450.0, "TotalReceipts": 7205.8, "TotalOutlays": 8324.0, "Deficit": 1118.2}, {"Year": 5, "GDP": 35573.2, "BaselineReceipts": 5962.6, "BaselineOutlays": 8189.0, "PolicyRevenue": 1500.0, "PolicySpending": 450.0, "TotalReceipts": 7462.6, "TotalOutlays": 8639.0, "Deficit": 1176.4}, {"Year": 6, "GDP": 36818.3, "BaselineReceipts": 6230.9, "BaselineOutlays": 8516.6, "PolicyRevenue": 1500.0, "PolicySpending": 450.0, "TotalReceipts": 7730.9, "TotalOutlays": 8966.6, "Deficit": 1235.7}, {"Year": 7, "GDP": 38106.9, "BaselineReceipts": 6511.3, "BaselineOutlays": 8857.2, "PolicyRevenue": 1500.0, "PolicySpending": 450.0, "TotalReceipts": 8011.3, "TotalOutlays": 9307.2, "Deficit": 1295.9}, {"Year": 8, "GDP": 39440.7, "BaselineReceipts": 6804.3, "BaselineOutlays": 9211.5, "PolicyRevenue": 1500.0, "PolicySpending": 450.0, "TotalReceipts": 8304.3, "TotalOutlays": 9661.5, "Deficit": 1357.2}, {"Year": 9, "GDP": 40821.1, "BaselineReceipts": 7110.5, "BaselineOutlays": 9580.0, "PolicyRevenue": 1500.0, "PolicySpending": 450.0, "TotalReceipts": 8610.5, "TotalOutlays": 10030.0, "Deficit": 1419.5}, {"Year": 10, "GDP": 42249.8, "BaselineReceipts": 7430.5, "BaselineOutlays": 9963.2, "PolicyRevenue": 1500.0, "PolicySpending": 450.0, "TotalReceipts": 8930.5, "TotalOutlays": 10413.2, "Deficit": 1482.7}]}, "conservative": {"name": "Conservative Scenario", "rows": [{"Year": 1, "GDP": 31000.0, "BaselineReceipts": 5000.0, "BaselineOutlays": 7000.0, "PolicyRevenue": 114.5, "PolicySpending": 250.0, "TotalReceipts": 5114.5, "TotalOutlays": 7250.0, "Deficit": 2135.5}, {"Year": 2, "GDP": 31775.0, "BaselineReceipts": 5200.0, "BaselineOutlays": 7315.0, "PolicyRevenue": 229.0, "PolicySpending": 500.0, "TotalReceipts": 5429.0, "TotalOutlays": 7815.0, "Deficit": 2386.0}, {"Year": 3, "GDP": 32569.4, "BaselineReceipts": 5408.0, "BaselineOutlays": 7644.2, "PolicyRevenue": 343.5, "PolicySpending": 750.0, "TotalReceipts": 5751.5, "TotalOutlays": 8394.2, "Deficit": 2642.7}, {"Year": 4, "GDP": 33383.6, "BaselineReceipts": 5624.3, "BaselineOutlays": 7988.2, "PolicyRevenue": 458.0, "PolicySpending": 1000.0, "TotalReceipts": 6082.3, "TotalOutlays": 8988.2, "Deficit": 2905.8}, {"Year": 5, "GDP": 34218.2, "BaselineReceipts": 5849.3, "BaselineOutlays": 8347.6, "PolicyRevenue": 458.0, "PolicySpending": 1000.0, "TotalReceipts": 6307.3, "TotalOutlays": 9347.6, "Deficit": 3040.3}, {"Year": 6, "GDP": 35073.7, "BaselineReceipts": 6083.3, "BaselineOutlays": 8723.3, "PolicyRevenue": 458.0, "PolicySpending": 1000.0, "TotalReceipts": 6541.3, "TotalOutlays": 9723.3, "Deficit": 3182.0}, {"Year": 7, "GDP": 35950.5, "BaselineReceipts": 6326.6, "BaselineOutlays": 9115.8, "PolicyRevenue": 458.0, "PolicySpending": 1000.0, "TotalReceipts": 6784.6, "TotalOutlays": 10115.8, "Deficit": 3331.2}, {"Year": 8, "GDP": 36849.3, "BaselineReceipts": 6579.7, "BaselineOutlays": 9526.0, "PolicyRevenue": 458.0, "PolicySpending": 1000.0, "TotalReceipts": 7037.7, "TotalOutlays": 10526.0, "Deficit": 3488.4}, {"Year": 9, "GDP": 37770.5, "BaselineReceipts": 6842.8, "BaselineOutlays": 9954.7, "PolicyRevenue": 458.0, "PolicySpending": 1000.0, "TotalReceipts": 7300.8, "TotalOutlays": 10954.7, "Deficit": 3653.9}, {"Year": 10, "GDP": 38714.8, "BaselineReceipts": 7116.6, "BaselineOutlays": 10402.7, "PolicyRevenue": 458.0, "PolicySpending": 1000.0, "TotalReceipts": 7574.6, "TotalOutlays": 11402.7, "Deficit": 3828.1}]}}};
+  </script>
+
+  <!-- Main Application Script -->
+  <script>
+    (function() {
+      const state = {
+        currentRoute: 'overview',
+        currentScenario: 'central_balanced',
+        viewMode: 'structured', // 'structured' or 'markdown'
+        theme: localStorage.getItem('dsa_theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+      };
+
+      // Initialize Theme
+      applyTheme(state.theme);
+
+      function applyTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        state.theme = theme;
+        localStorage.setItem('dsa_theme', theme);
+        const sun = document.getElementById('themeIconSun');
+        const moon = document.getElementById('themeIconMoon');
+        if (theme === 'dark') {
+          sun.style.display = 'block';
+          moon.style.display = 'none';
+        } else {
+          sun.style.display = 'none';
+          moon.style.display = 'block';
+        }
+      }
+
+      document.getElementById('themeToggleBtn').addEventListener('click', () => {
+        applyTheme(state.theme === 'dark' ? 'light' : 'dark');
+      });
+
+      // Sidebar Navigation Builder
+      const policyNavList = document.getElementById('policyNavList');
+      SITE_DATA.docs.forEach((doc, idx) => {
+        const li = document.createElement('li');
+        li.className = 'nav-item';
+        li.id = 'nav-' + doc.id;
+        
+        // Extract roman numeral or clean title
+        const romanMatch = doc.title.match(/^([IVXLCDM]+)\.\s*(.*)/);
+        const num = romanMatch ? romanMatch[1] : (idx + 1).toString().padStart(2, '0');
+        const label = romanMatch ? romanMatch[2] : doc.title;
+
+        li.innerHTML = `
+          <a href="#${doc.id}">
+            <span class="nav-num">${num}.</span>
+            <span>${escapeHtml(label)}</span>
+          </a>
+        `;
+        policyNavList.appendChild(li);
+      });
+
+      // Mobile Menu Toggle
+      const sidebar = document.getElementById('sidebar');
+      const menuToggleBtn = document.getElementById('menuToggleBtn');
+      menuToggleBtn.addEventListener('click', () => {
+        sidebar.classList.toggle('open');
+      });
+
+      // Close mobile menu on link click
+      sidebar.addEventListener('click', (e) => {
+        if (e.target.closest('a')) {
+          sidebar.classList.remove('open');
+        }
+      });
+
+      // Simple Markdown Fallback if Marked fails
+      function renderMarkdown(md) {
+        if (typeof marked !== 'undefined' && marked.parse) {
+          return marked.parse(md);
+        }
+        // Basic fallback
+        return md
+          .replace(/^### (.*$)/gim, '<h3>$1</h3>')
+          .replace(/^## (.*$)/gim, '<h2>$1</h2>')
+          .replace(/^# (.*$)/gim, '<h1>$1</h1>')
+          .replace(/\*\*(.*)\*\*/gim, '<strong>$1</strong>')
+          .replace(/\*(.*)\*/gim, '<em>$1</em>')
+          .replace(/\n\n/gim, '<br><br>');
+      }
+
+      // Helper for Toast
+      function showToast(msg) {
+        const toast = document.getElementById('toast');
+        toast.textContent = msg;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2000);
+      }
+
+      // Routing
+      function handleRoute() {
+        const hash = window.location.hash.replace('#', '') || 'overview';
+        state.currentRoute = hash;
+
+        // Update nav active classes
+        document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+        const activeNav = document.getElementById('nav-' + hash);
+        if (activeNav) activeNav.classList.add('active');
+
+        // Render appropriate content
+        if (hash === 'overview') {
+          renderOverview();
+        } else if (hash === 'budget-model') {
+          renderBudgetModel();
+        } else {
+          const doc = SITE_DATA.docs.find(d => d.id === hash);
+          if (doc) {
+            renderDoc(doc);
+          } else {
+            renderOverview();
+          }
+        }
+
+        window.scrollTo(0, 0);
+      }
+
+      window.addEventListener('hashchange', handleRoute);
+      window.addEventListener('DOMContentLoaded', handleRoute);
+
+      // Render Platform Overview (README)
+      function renderOverview() {
+        const container = document.getElementById('contentArea');
+        const html = `
+          <div class="doc-hero">
+            <span class="badge-category">Core Platform Platform</span>
+            <h1 class="doc-title">Platform for a Democratic Socialist Government</h1>
+            <p style="font-size: 1.15rem; color: var(--text-muted); line-height: 1.6;">
+              A comprehensive program of economic reform, democratic reconstruction, and public investment intended to restore institutional capacity and align governance with the public interest.
+            </p>
+            <div class="doc-meta-actions">
+              <a href="https://github.com/glenpierce/newDemocraticSocialistAgendaProposal/blob/main/README.md" target="_blank" rel="noopener" class="btn-action">
+                <svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+                View on GitHub
+              </a>
+              <button class="btn-action" onclick="copyCurrentUrl()">
+                <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+                Share Platform
+              </button>
+            </div>
+          </div>
+
+          <div class="summary-card">
+            <div class="summary-title">
+              <span>🌟</span>
+              <span>Platform Foundation</span>
+            </div>
+            <div class="summary-text">
+              The United States has the productive capacity, technical expertise, and financial resources to provide economic security, political stability, and broad prosperity. Persistent inequality, institutional dysfunction, and declining public trust are the result of policy design choices, not structural inevitabilities.
+            </div>
+          </div>
+
+          <div class="section-title">
+            <span>Platform Pillars & Policy Drafts</span>
+            <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-light);">13 Detailed Proposals</span>
+          </div>
+
+          <div class="policy-items-grid" style="grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));">
+            ${SITE_DATA.docs.map(doc => `
+              <a href="#${doc.id}" class="policy-card" style="text-decoration:none; display:flex; flex-direction:column; justify-content:space-between;">
+                <div>
+                  <div class="policy-card-title" style="color:var(--primary); font-size: 1rem;">
+                    <span class="policy-card-bullet"></span>
+                    <span>${escapeHtml(doc.title)}</span>
+                  </div>
+                  <div class="policy-card-desc" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-top:0.4rem;">
+                    ${escapeHtml(doc.summary || 'Click to view the detailed legislative and administrative draft.')}
+                  </div>
+                </div>
+                <div style="margin-top: 1rem; font-size: 0.8rem; font-weight: 600; color: var(--primary);">
+                  Read proposal →
+                </div>
+              </a>
+            `).join('')}
+          </div>
+
+          <div class="section-title">
+            <span>Full Manifesto Text</span>
+          </div>
+
+          <article class="markdown-body">
+            ${renderMarkdown(SITE_DATA.readme)}
+          </article>
+
+          <div class="doc-nav-footer">
+            <div></div>
+            <a href="#01-fiscal-policy-and-wealth-concentration" class="doc-nav-btn next">
+              <span class="doc-nav-label">Next Section</span>
+              <span class="doc-nav-title">I. Fiscal Policy & Wealth Concentration →</span>
+            </a>
+          </div>
+        `;
+        container.innerHTML = html;
+      }
+
+      // Render Individual Policy Document
+      function renderDoc(doc) {
+        const container = document.getElementById('contentArea');
+        const currentIndex = SITE_DATA.docs.findIndex(d => d.id === doc.id);
+        const prevDoc = currentIndex > 0 ? SITE_DATA.docs[currentIndex - 1] : null;
+        const nextDoc = currentIndex < SITE_DATA.docs.length - 1 ? SITE_DATA.docs[currentIndex + 1] : null;
+
+        let contentHtml = '';
+        if (state.viewMode === 'structured' && doc.policy_items && doc.policy_items.length > 0) {
+          contentHtml = `
+            ${doc.summary ? `
+              <div class="summary-card">
+                <div class="summary-title">
+                  <span>📌</span>
+                  <span>Executive Summary</span>
+                </div>
+                <div class="summary-text">${escapeHtml(doc.summary)}</div>
+              </div>
+            ` : ''}
+
+            <div class="section-title">
+              <span>Policy Items & Measures</span>
+              <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-light);">${doc.policy_items.length} Specific Proposals</span>
+            </div>
+
+            <div class="policy-items-grid">
+              ${doc.policy_items.map(item => {
+                const parts = item.split('—');
+                const title = parts.length > 1 ? parts[0].trim() : '';
+                const desc = parts.length > 1 ? parts.slice(1).join('—').trim() : item;
+                return `
+                  <div class="policy-card">
+                    <div class="policy-card-title">
+                      <span class="policy-card-bullet"></span>
+                      <span>${title ? escapeHtml(title) : 'Proposal'}</span>
+                    </div>
+                    <div class="policy-card-desc">${escapeHtml(desc)}</div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+
+            ${doc.implementation ? `
+              <div class="impl-card">
+                <div class="impl-title">
+                  <span>🏛️</span>
+                  <span>Implementation & Administration</span>
+                </div>
+                <div class="impl-desc">${escapeHtml(doc.implementation)}</div>
+              </div>
+            ` : ''}
+          `;
+        } else {
+          // Markdown view
+          contentHtml = `
+            <article class="markdown-body">
+              ${renderMarkdown(doc.content)}
+            </article>
+          `;
+        }
+
+        const html = `
+          <div class="doc-hero">
+            <span class="badge-category">Policy Framework</span>
+            <h1 class="doc-title">${escapeHtml(doc.title)}</h1>
+            
+            <div class="doc-meta-actions">
+              <div class="view-mode-toggle">
+                <button class="view-mode-btn ${state.viewMode === 'structured' ? 'active' : ''}" onclick="toggleViewMode('structured')">Structured View</button>
+                <button class="view-mode-btn ${state.viewMode === 'markdown' ? 'active' : ''}" onclick="toggleViewMode('markdown')">Full Source</button>
+              </div>
+
+              <a href="https://github.com/glenpierce/newDemocraticSocialistAgendaProposal/blob/main/docs/${doc.filename}" target="_blank" rel="noopener" class="btn-action">
+                <svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+                GitHub File
+              </a>
+
+              <button class="btn-action" onclick="copyCurrentUrl()">
+                <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+                Copy Link
+              </button>
+            </div>
+          </div>
+
+          ${contentHtml}
+
+          <div class="doc-nav-footer">
+            ${prevDoc ? `
+              <a href="#${prevDoc.id}" class="doc-nav-btn prev">
+                <span class="doc-nav-label">← Previous</span>
+                <span class="doc-nav-title">${escapeHtml(prevDoc.title)}</span>
+              </a>
+            ` : `
+              <a href="#overview" class="doc-nav-btn prev">
+                <span class="doc-nav-label">← Platform</span>
+                <span class="doc-nav-title">Overview</span>
+              </a>
+            `}
+            ${nextDoc ? `
+              <a href="#${nextDoc.id}" class="doc-nav-btn next">
+                <span class="doc-nav-label">Next →</span>
+                <span class="doc-nav-title">${escapeHtml(nextDoc.title)}</span>
+              </a>
+            ` : `
+              <a href="#budget-model" class="doc-nav-btn next">
+                <span class="doc-nav-label">Next →</span>
+                <span class="doc-nav-title">10-Year Budget Model</span>
+              </a>
+            `}
+          </div>
+        `;
+
+        container.innerHTML = html;
+      }
+
+      window.toggleViewMode = function(mode) {
+        state.viewMode = mode;
+        handleRoute();
+      };
+
+      // Render 10-Year Budget Model
+      function renderBudgetModel() {
+        const container = document.getElementById('contentArea');
+        const scenario = SITE_DATA.scenarios[state.currentScenario] || SITE_DATA.scenarios['central_balanced'];
+        const rows = scenario.rows || [];
+
+        // Compute metrics
+        let totalReceipts10 = 0;
+        let totalOutlays10 = 0;
+        let totalPolicyRev10 = 0;
+        let totalPolicySpend10 = 0;
+        let cumulativeNetDeficitChange = 0;
+
+        rows.forEach(r => {
+          totalReceipts10 += r.TotalReceipts;
+          totalOutlays10 += r.TotalOutlays;
+          totalPolicyRev10 += r.PolicyRevenue;
+          totalPolicySpend10 += r.PolicySpending;
+          const baselineDef = r.BaselineOutlays - r.BaselineReceipts;
+          cumulativeNetDeficitChange += (r.Deficit - baselineDef);
+        });
+
+        const year10GDP = rows.length ? rows[rows.length - 1].GDP : 0;
+
+        const html = `
+          <div class="doc-hero">
+            <span class="badge-category">Fiscal Architecture</span>
+            <h1 class="doc-title">XIII. Economic Analysis & 10-Year Budget Projections</h1>
+            <p style="font-size: 1.05rem; color: var(--text-muted);">
+              Parameterized, reproducible 10-year fiscal model comparing baseline federal receipts and outlays to the platform's policy package.
+            </p>
+            <div class="doc-meta-actions">
+              <a href="https://github.com/glenpierce/newDemocraticSocialistAgendaProposal/blob/main/docs/13-economic-analysis-and-10-year-projections.md" target="_blank" rel="noopener" class="btn-action">
+                <svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+                View Document 13
+              </a>
+              <a href="https://github.com/glenpierce/newDemocraticSocialistAgendaProposal/blob/main/tools/10yr_budget_model.py" target="_blank" rel="noopener" class="btn-action">
+                <svg viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+                Python Budget Script
+              </a>
+            </div>
+          </div>
+
+          <div class="summary-card">
+            <div class="summary-title">
+              <span>🎯</span>
+              <span>Model Objective & Baseline Contract</span>
+            </div>
+            <div class="summary-text">
+              The platform pairs robust progressive revenue generation (wealth tax, corporate minimums, capital gains parity, enhanced enforcement) with investments in healthcare, education, climate, and social infrastructure. Starting from current nominal U.S. GDP of <strong>$31.0 trillion</strong> and baseline receipts/outlays of $5.0T/$7.0T.
+            </div>
+          </div>
+
+          <div class="section-title">
+            <span>Projection Scenarios</span>
+          </div>
+
+          <div class="scenario-tabs">
+            <button class="scenario-tab-btn ${state.currentScenario === 'central_balanced' ? 'active' : ''}" onclick="switchScenario('central_balanced')">Central Balanced Case</button>
+            <button class="scenario-tab-btn ${state.currentScenario === 'optimistic' ? 'active' : ''}" onclick="switchScenario('optimistic')">Optimistic Scenario</button>
+            <button class="scenario-tab-btn ${state.currentScenario === 'conservative' ? 'active' : ''}" onclick="switchScenario('conservative')">Conservative Scenario</button>
+          </div>
+
+          <div class="metrics-summary-grid">
+            <div class="metric-card">
+              <div class="metric-label">10-Yr Policy Revenue</div>
+              <div class="metric-value" style="color: #16a34a;">+$${(totalPolicyRev10 / 1000).toFixed(2)}T</div>
+              <div class="metric-subtext">$${totalPolicyRev10.toLocaleString('en-US', {maximumFractionDigits:1})}B cumulative</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">10-Yr Policy Spending</div>
+              <div class="metric-value" style="color: var(--primary);">+$${(totalPolicySpend10 / 1000).toFixed(2)}T</div>
+              <div class="metric-subtext">$${totalPolicySpend10.toLocaleString('en-US', {maximumFractionDigits:1})}B cumulative</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Cumulative Deficit Delta</div>
+              <div class="metric-value" style="color: ${cumulativeNetDeficitChange <= 0 ? '#16a34a' : 'var(--primary)'};">
+                ${cumulativeNetDeficitChange > 0 ? '+' : ''}${cumulativeNetDeficitChange.toLocaleString('en-US', {maximumFractionDigits:1})}B
+              </div>
+              <div class="metric-subtext">${cumulativeNetDeficitChange <= 0 ? 'Surplus / Deficit Reduced' : 'Additional Deficit'}</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Year 10 Nominal GDP</div>
+              <div class="metric-value">$${(year10GDP / 1000).toFixed(1)}T</div>
+              <div class="metric-subtext">$${year10GDP.toLocaleString('en-US', {maximumFractionDigits:1})}B</div>
+            </div>
+          </div>
+
+          <div class="section-title">
+            <span>Annual Fiscal Projections Table (USD Billions)</span>
+          </div>
+
+          <div class="table-responsive-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Year</th>
+                  <th>Nominal GDP</th>
+                  <th>Base Receipts</th>
+                  <th>Base Outlays</th>
+                  <th>Policy Revenue</th>
+                  <th>Policy Spending</th>
+                  <th>Total Receipts</th>
+                  <th>Total Outlays</th>
+                  <th>Annual Deficit</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${rows.map(r => `
+                  <tr>
+                    <td>Year ${r.Year}</td>
+                    <td>$${r.GDP.toLocaleString('en-US', {minimumFractionDigits: 1, maximumFractionDigits: 1})}</td>
+                    <td>$${r.BaselineReceipts.toLocaleString('en-US', {minimumFractionDigits: 1, maximumFractionDigits: 1})}</td>
+                    <td>$${r.BaselineOutlays.toLocaleString('en-US', {minimumFractionDigits: 1, maximumFractionDigits: 1})}</td>
+                    <td style="color:#16a34a; font-weight:600;">+$${r.PolicyRevenue.toLocaleString('en-US', {minimumFractionDigits: 1, maximumFractionDigits: 1})}</td>
+                    <td style="color:var(--primary); font-weight:600;">+$${r.PolicySpending.toLocaleString('en-US', {minimumFractionDigits: 1, maximumFractionDigits: 1})}</td>
+                    <td style="font-weight:600;">$${r.TotalReceipts.toLocaleString('en-US', {minimumFractionDigits: 1, maximumFractionDigits: 1})}</td>
+                    <td style="font-weight:600;">$${r.TotalOutlays.toLocaleString('en-US', {minimumFractionDigits: 1, maximumFractionDigits: 1})}</td>
+                    <td style="font-weight:700;">$${r.Deficit.toLocaleString('en-US', {minimumFractionDigits: 1, maximumFractionDigits: 1})}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td>10-Yr Total</td>
+                  <td>—</td>
+                  <td>—</td>
+                  <td>—</td>
+                  <td style="color:#16a34a;">+$${totalPolicyRev10.toLocaleString('en-US', {minimumFractionDigits: 1, maximumFractionDigits: 1})}</td>
+                  <td style="color:var(--primary);">+$${totalPolicySpend10.toLocaleString('en-US', {minimumFractionDigits: 1, maximumFractionDigits: 1})}</td>
+                  <td>$${totalReceipts10.toLocaleString('en-US', {minimumFractionDigits: 1, maximumFractionDigits: 1})}</td>
+                  <td>$${totalOutlays10.toLocaleString('en-US', {minimumFractionDigits: 1, maximumFractionDigits: 1})}</td>
+                  <td>—</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+
+          <div class="section-title">
+            <span>Policy Levers & Steady-State Assumptions</span>
+          </div>
+
+          <div class="policy-items-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+            <div class="policy-card">
+              <div class="policy-card-title"><span class="policy-card-bullet"></span> Wealth Tax (8% >$100M)</div>
+              <div class="policy-card-desc">
+                Estimated steady-state taxable wealth base = $10.0T. Compliance factor = 60%, administrative cost = 5%. Generates <strong>$456B - $700B/yr</strong> at full implementation.
+              </div>
+            </div>
+            <div class="policy-card">
+              <div class="policy-card-title"><span class="policy-card-bullet"></span> Corporate & Minimum Tax</div>
+              <div class="policy-card-desc">
+                Anti-avoidance provisions, global minimum tax, and transfer pricing reform generating <strong>+$150B to +$200B/yr</strong>.
+              </div>
+            </div>
+            <div class="policy-card">
+              <div class="policy-card-title"><span class="policy-card-bullet"></span> Capital Gains Parity</div>
+              <div class="policy-card-desc">
+                Aligning capital gains tax rates with ordinary income for high earners and mark-to-market treatment generating <strong>+$120B to +$150B/yr</strong>.
+              </div>
+            </div>
+            <div class="policy-card">
+              <div class="policy-card-title"><span class="policy-card-bullet"></span> Single-Payer Healthcare Net Cost</div>
+              <div class="policy-card-desc">
+                Replaces private premiums with public funding. Eliminates administrative overhead and drug price gouging, netting <strong>+$200B to +$300B/yr</strong> federal spending.
+              </div>
+            </div>
+          </div>
+
+          <div class="impl-card" style="margin-top: 2rem;">
+            <div class="impl-title">
+              <span>💻</span>
+              <span>Reproduce & Verify the Model Locally</span>
+            </div>
+            <div class="impl-desc">
+              <p style="margin-bottom: 0.5rem;">The projection model is open-source and parameterized in Python. To run all scenarios locally:</p>
+              <pre style="background:var(--bg-muted); padding:0.8rem; border-radius:6px; font-family:var(--font-mono); font-size:0.85rem; overflow-x:auto;"><code>python3 tools/10yr_budget_model.py</code></pre>
+              <p style="margin-top: 0.5rem; font-size: 0.85rem;">Outputs are saved to <code>outputs/10yr_projection_[scenario].csv</code> matching the published data above.</p>
+            </div>
+          </div>
+
+          <div class="doc-nav-footer">
+            <a href="#12-housing-mental-health-and-social-services" class="doc-nav-btn prev">
+              <span class="doc-nav-label">← Previous</span>
+              <span class="doc-nav-title">XII. Housing, Mental Health & Social Services</span>
+            </a>
+            <a href="#overview" class="doc-nav-btn next">
+              <span class="doc-nav-label">Return to Start →</span>
+              <span class="doc-nav-title">Platform Overview</span>
+            </a>
+          </div>
+        `;
+
+        container.innerHTML = html;
+      }
+
+      window.switchScenario = function(scen) {
+        state.currentScenario = scen;
+        renderBudgetModel();
+      };
+
+      window.copyCurrentUrl = function() {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          showToast('Link copied to clipboard');
+        }).catch(() => {
+          showToast('Failed to copy link');
+        });
+      };
+
+      // Search functionality
+      const searchInput = document.getElementById('searchInput');
+      const searchDropdown = document.getElementById('searchResultsDropdown');
+
+      // Build search index
+      const searchIndex = [];
+      searchIndex.push({
+        id: 'overview',
+        title: 'Platform for a Democratic Socialist Government (Manifesto)',
+        content: SITE_DATA.readme
+      });
+      searchIndex.push({
+        id: 'budget-model',
+        title: 'Economic Analysis & 10-Year Budget Projections',
+        content: 'budget projection model gdp receipts outlays wealth tax corporate capital gains single payer deficit surplus scenarios'
+      });
+      SITE_DATA.docs.forEach(doc => {
+        searchIndex.push({
+          id: doc.id,
+          title: doc.title,
+          content: doc.content + ' ' + (doc.policy_items ? doc.policy_items.join(' ') : '') + ' ' + doc.implementation
+        });
+      });
+
+      searchInput.addEventListener('input', (e) => {
+        const q = e.target.value.trim().toLowerCase();
+        if (!q) {
+          searchDropdown.classList.remove('active');
+          searchDropdown.innerHTML = '';
+          return;
+        }
+
+        const matches = [];
+        searchIndex.forEach(item => {
+          const titleMatch = item.title.toLowerCase().indexOf(q);
+          const contentMatch = item.content.toLowerCase().indexOf(q);
+          if (titleMatch !== -1 || contentMatch !== -1) {
+            let snippet = '';
+            if (contentMatch !== -1) {
+              const start = Math.max(0, contentMatch - 40);
+              const end = Math.min(item.content.length, contentMatch + 100);
+              snippet = '...' + item.content.substring(start, end).replace(/\n/g, ' ') + '...';
+            } else {
+              snippet = item.title;
+            }
+            matches.push({
+              id: item.id,
+              title: item.title,
+              snippet: snippet
+            });
+          }
+        });
+
+        if (matches.length > 0) {
+          searchDropdown.innerHTML = matches.slice(0, 8).map(m => `
+            <a href="#${m.id}" class="search-result-item" onclick="closeSearch()">
+              <div class="search-result-title">${escapeHtml(m.title)}</div>
+              <div class="search-result-snippet">${escapeHtml(m.snippet)}</div>
+            </a>
+          `).join('');
+          searchDropdown.classList.add('active');
+        } else {
+          searchDropdown.innerHTML = '<div style="padding:1rem; font-size:0.85rem; color:var(--text-light); text-align:center;">No matching policies or text found</div>';
+          searchDropdown.classList.add('active');
+        }
+      });
+
+      window.closeSearch = function() {
+        searchDropdown.classList.remove('active');
+        searchInput.value = '';
+      };
+
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('#searchHeaderCenter')) {
+          searchDropdown.classList.remove('active');
+        }
+      });
+
+      // Keyboard shortcut '/'
+      document.addEventListener('keydown', (e) => {
+        if (e.key === '/' && document.activeElement !== searchInput) {
+          e.preventDefault();
+          searchInput.focus();
+          searchInput.select();
+        }
+        if (e.key === 'Escape') {
+          closeSearch();
+          searchInput.blur();
+        }
+      });
+
+      function escapeHtml(text) {
+        if (!text) return '';
+        return text
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#039;');
+      }
+
+    })();
+  </script>
+</body>
+</html>
